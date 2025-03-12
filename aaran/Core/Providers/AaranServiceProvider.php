@@ -3,7 +3,7 @@
 namespace Aaran\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Artisan;
 
 class AaranServiceProvider extends ServiceProvider
 {
