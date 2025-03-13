@@ -1,0 +1,46 @@
+<?php
+
+namespace Aaran\Auth\Identity\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+class AuthServiceProvider extends ServiceProvider
+{
+    protected string $moduleName = 'Identity';
+    protected string $moduleNameLower = 'identity';
+
+    public function register()
+    {
+        //
+    }
+
+    public function boot()
+    {
+        $this->registerConfigs();
+        $this->registerRoutes();
+        $this->registerMigrations();
+        $this->registerViews();
+    }
+
+    private function registerConfigs(): void
+    {
+        $this->mergeConfigFrom(__DIR__ . '/../Config/auth.php', 'auth');
+    }
+
+    private function registerRoutes()
+    {
+        $this->loadRoutesFrom(__DIR__ . '/../Routes/web.php');
+        $this->loadRoutesFrom(__DIR__ . '/../Routes/api.php');
+    }
+
+    private function registerMigrations()
+    {
+        $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+    }
+
+    private function registerViews()
+    {
+        $this->loadViewsFrom(__DIR__ . '/../Livewire/Views', $this->moduleNameLower);
+    }
+
+}
