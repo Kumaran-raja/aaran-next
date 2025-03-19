@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
-class MultiTenantAuthTest extends TestCase
+class T04_MultiTenantAuthTest extends TestCase
 {
     use RefreshDatabase;
 

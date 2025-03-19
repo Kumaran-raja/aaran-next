@@ -6,7 +6,7 @@ use Aaran\Core\Tenant\Models\Tenant;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class TenantTest extends TestCase
+class T02_TenantTest extends TestCase
 {
     use RefreshDatabase;  // Ensures a fresh DB for each test
 
