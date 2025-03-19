@@ -77,8 +77,9 @@ Each tenant gets its own database. We need a **central `tenants` table** to trac
 We need a **Tenant Switcher** to dynamically switch the database when a request comes.
 
 ### **📌 Middleware: Detect Tenant from Domain (`Aaran/Core/Tenant/Middleware/TenantMiddleware.php`)**
+
 ```php
-namespace Aaran\Core\Tenant\Middleware;
+namespace Aaran\Core\Tenant\Tests\Unit\Middleware;
 
 use Closure;
 use Aaran\Services\TenantService;
@@ -238,12 +239,13 @@ When a new tenant registers, we need to:
 ✅ **Assign a default admin role** for RBAC.
 
 📌 **Service: Create Tenant DB (`Aaran/Core/Tenant/Services/TenantCreator.php`)**
+
 ```php
-namespace Aaran\Core\Tenant\Services;
+namespace Aaran\Core\Tenant\Tests\Unit\Services;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Artisan;
-use Aaran\Core\Tenant\Models\Tenant;
+use Aaran\Core\Tenant\Tests\Unit\Models\Tenant;
 
 class TenantCreator
 {

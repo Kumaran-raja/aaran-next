@@ -1,16 +1,13 @@
 <?php
 
-namespace Aaran\Core\Tenant\Providers;
+namespace Aaran\Core\User\Providers;
 
-use Aaran\Core\Tenant\Http\Middleware\TenantMiddleware;
-use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
-class TenantServiceProvider extends ServiceProvider
+class AuthServiceProvider extends ServiceProvider
 {
-
-    protected string $moduleName = 'Tenant';
-    protected string $moduleNameLower = 'tenant';
+    protected string $moduleName = 'User';
+    protected string $moduleNameLower = 'user';
 
     public function register()
     {
@@ -20,24 +17,14 @@ class TenantServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerConfigs();
-        $this->registerMiddleware();
         $this->registerRoutes();
         $this->registerMigrations();
         $this->registerViews();
     }
 
-    protected function registerMiddleware()
-    {
-        $router = $this->app->make(Router::class);
-
-        // Apply Tenant Middleware to the "web" group
-        $router->pushMiddlewareToGroup('web', TenantMiddleware::class);
-    }
-
-
     private function registerConfigs(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../Config/tenant.php', 'tenant');
+        $this->mergeConfigFrom(__DIR__ . '/../Config/auth.php', 'auth');
     }
 
     private function registerRoutes()
@@ -57,5 +44,3 @@ class TenantServiceProvider extends ServiceProvider
     }
 
 }
-
-

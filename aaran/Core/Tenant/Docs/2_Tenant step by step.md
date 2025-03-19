@@ -15,9 +15,8 @@ Run the following command:
 Now, update the **Tenant Model** (`Core/Tenant/Tenant.php`):
 
 ```php
-namespace Aaran\Core\Tenant\Models;
+namespace Aaran\Core\Tenant\Tests\Unit\Models;
 
-use Aaran\Auth\Identity\Models\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Tenant extends Model
@@ -26,7 +25,7 @@ class Tenant extends Model
 
     public function users()
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(\Aaran\Core\User\Models\User::class);
     }
 }
 ```
@@ -126,8 +125,8 @@ Now update `app/Http/Middleware/TenantMiddleware.php`:
 namespace App\Http\Middleware;
 
 use Closure;
-use Aaran\Core\Tenant\Models\Tenant;
-use Aaran\Core\Tenant\Models\TenantManager;
+use Aaran\Core\Tenant\Tests\Unit\Models\Tenant;
+use Aaran\Core\Tenant\Tests\Unit\Models\TenantManager;
 
 class TenantMiddleware
 {
@@ -152,7 +151,7 @@ Register the middleware in `app/Http/Kernel.php`:
 ```php
 protected $middleware = [
     // Other global middleware...
-    \Aaran\Core\Tenant\Http\Middleware\TenantMiddleware::class,
+    \Aaran\Core\Tenant\Tests\Unit\Http\Middleware\TenantMiddleware::class,
 ];
 ```
 
@@ -181,7 +180,7 @@ class TenantDatabaseManager
 Modify `Tenant` model to **trigger DB creation on saving**:
 
 ```php
-use Aaran\Core\Tenant\Models\TenantDatabaseManager;
+use Aaran\Core\Tenant\Tests\Unit\Models\TenantDatabaseManager;
 
 protected static function boot()
 {
@@ -208,7 +207,7 @@ Now update `app/Http/Controllers/TenantController.php`:
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Aaran\Core\Tenant\Models\Tenant;
+use Aaran\Core\Tenant\Tests\Unit\Models\Tenant;
 
 class TenantController extends Controller
 {
@@ -254,8 +253,8 @@ Now update `app/Console/Commands/MigrateTenants.php`:
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Aaran\Core\Tenant\Models\Tenant;
-use Aaran\Core\Tenant\Models\TenantManager;
+use Aaran\Core\Tenant\Tests\Unit\Models\Tenant;
+use Aaran\Core\Tenant\Tests\Unit\Models\TenantManager;
 use Illuminate\Support\Facades\Artisan;
 
 class MigrateTenants extends Command

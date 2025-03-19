@@ -21,6 +21,7 @@ class TenantManager
         return static::$tenant;
     }
 
+
     protected static function setDatabaseConnection(Tenant $tenant): void
     {
         Config::set("database.connections.tenant", [
@@ -38,5 +39,21 @@ class TenantManager
 
         DB::purge('tenant');
         DB::reconnect('tenant');
+    }
+
+    /**
+     * Find a tenant by domain and return the Tenant model.
+     */
+    public function findByDomain(string $domain): ?Tenant
+    {
+        return Tenant::where('domain', $domain)->first();
+    }
+
+    /**
+     * Create a new tenant.
+     */
+    public function create(array $data): Tenant
+    {
+        return Tenant::create($data);
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Aaran\Core\Tenant\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use Aaran\Core\Tenant\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\RedirectResponse;
