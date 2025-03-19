@@ -1,6 +1,6 @@
 <?php
 
-namespace Aaran\Tenant\Providers;
+namespace Aaran\Core\Tenant\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

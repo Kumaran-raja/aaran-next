@@ -1,10 +1,10 @@
 <?php
 
-namespace Aaran\Core\Providers;
+namespace Aaran\Core\Sys\Providers;
 
 use Aaran\Auth\Identity\Providers\AuthServiceProvider;
+use Aaran\Core\Setup\Providers\SetupServiceProvider;
 use Aaran\Dashboard\Providers\DashboardProvider;
-use Aaran\Setup\Providers\SetupServiceProvider;
 use Aaran\Website\Providers\WebsiteProvider;
 use Illuminate\Support\ServiceProvider;
 

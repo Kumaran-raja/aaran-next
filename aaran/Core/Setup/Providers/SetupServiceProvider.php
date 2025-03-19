@@ -1,10 +1,10 @@
 <?php
 
-namespace Aaran\Setup\Providers;
+namespace Aaran\Core\Setup\Providers;
 
-use Aaran\Setup\Console\Commands\SetupAaranCommand;
+use Aaran\Core\Setup\Console\Commands\AaranMigrateRefresh;
+use Aaran\Core\Setup\Console\Commands\SetupAaranCommand;
 use Illuminate\Support\ServiceProvider;
-use Aaran\Setup\Console\Commands\AaranMigrateRefresh;
 
 class SetupServiceProvider extends ServiceProvider
 {

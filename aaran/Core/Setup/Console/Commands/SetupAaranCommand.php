@@ -1,6 +1,6 @@
 <?php
 
-namespace Aaran\Setup\Console\Commands;
+namespace Aaran\Core\Setup\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
