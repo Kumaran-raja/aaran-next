@@ -2,7 +2,9 @@
 
 namespace Aaran\Core\Tenant\Tests\Feature;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Route;
 use ReflectionClass;
 use Tests\TestCase;
 
@@ -14,10 +16,22 @@ class T01_TenantStructureTest extends TestCase
     public function test_tenant_module_files_exist()
     {
         $files = [
-            'Aaran/Core/Tenant/Models/Tenant.php',
-            'Aaran/Core/Tenant/Services/TenantManager.php',
+            'Aaran/Core/Tenant/Config/tenant.php',
+
+            'Aaran/Core/Tenant/Database/Factories/TenantFactory.php',
+            'Aaran/Core/Tenant/Database/Migrations/2025_01_01_000001_create_tenants_table.php',
+            'Aaran/Core/Tenant/Database/Seeders/TenantSeeder.php',
+
             'Aaran/Core/Tenant/Http/Controllers/TenantController.php',
             'Aaran/Core/Tenant/Http/Middleware/TenantMiddleware.php',
+
+            'Aaran/Core/Tenant/Models/Tenant.php',
+            'Aaran/Core/Tenant/Providers/TenantServiceProvider.php',
+
+            'Aaran/Core/Tenant/Routes/api.php',
+            'Aaran/Core/Tenant/Routes/web.php',
+
+            'Aaran/Core/Tenant/Services/TenantManager.php',
         ];
 
         $missingFiles = [];
@@ -103,4 +117,41 @@ class T01_TenantStructureTest extends TestCase
         $class = new ReflectionClass(\Aaran\Core\Tenant\Http\Middleware\TenantMiddleware::class);
         $this->assertTrue($class->hasMethod('handle'), "Missing method: handle in TenantMiddleware");
     }
+
+    /**
+     * ✅ Check if Tenant routes are registered.
+     */
+    public function test_tenant_routes_are_registered()
+    {
+        $routes = collect(Route::getRoutes())->map(fn($route) => $route->uri())->toArray();
+        $expectedRoutes = ['tenant/dashboard', 'tenant/settings'];
+        $missingRoutes = array_diff($expectedRoutes, $routes);
+
+        $this->assertEmpty($missingRoutes, "❌ Missing routes: " . implode(', ', $missingRoutes));
+    }
+
+    /**
+     * ✅ Check if TenantMiddleware is registered.
+     */
+    public function test_tenant_middleware_is_registered()
+    {
+        $kernel = App::make(\Illuminate\Contracts\Http\Kernel::class);
+        $middleware = $kernel->getMiddlewareGroups()['web'];
+
+        $this->assertTrue(in_array(\Aaran\Core\Tenant\Http\Middleware\TenantMiddleware::class, $middleware),
+            "❌ TenantMiddleware is not registered in web middleware group.");
+    }
+
+    /**
+     * ✅ Check if TenantServiceProvider is registered.
+     */
+    public function test_tenant_service_provider_is_registered()
+    {
+        $providers = App::getLoadedProviders();
+
+        $this->assertArrayHasKey(\Aaran\Core\Tenant\Providers\TenantServiceProvider::class, $providers,
+            "❌ TenantServiceProvider is not registered.");
+    }
+
+
 }
