@@ -3,21 +3,17 @@
 ```
 🌍 Core/ 
  ├── 🏢 Tenant/
- │   ├── 📂 Modle/         # System Core (Services, Config, Database)
- │   │   ├── ⚙️ Tenant       # Configuration Files
- │   ├── Modles
- │   ├── 🛡️ RBAC/       # Role-Based Access Control
- │   ├── 👤 User/        # User Management (Auth, Identity, Tokens)
- │   ├── ⚙️ Setup/       # System Setup, Installers
- │   ├── 🔧 Settings/    # Global Settings & Configurations
- │   ├── 📂 Sys/         # System Core (Services, Config, Database)
- │   │   ├── ⚙️ Config/       # Configuration Files
- │   │   ├── 🏗️ Providers/    # Service Providers
- │   │   ├── 🗄️ Database/     # Database Configuration
- │   │   ├── 🔄 Middleware/   # Global Middleware
- │   │   ├── 🔌 Services/     # Core Services (Payments, Notifications, Logging)
- │   ├── 📖 Docs/        # Documentation, API Docs
- │   ├── ⚡ Console/      # CLI & Artisan Commands
+ │   ├── 📂 Modle/               
+ │   │   └── 📃 Tenant.php           # Tenant model storing metadata
+ │   ├──🗄️Database
+ │   │   ├── 📂 Migrations
+ │   │       └── 📃 2025_xx_xx_create_tenants_table.php
+ │   │   ├── Seeders
+ │   │       └── 📃 2025_xx_xx_create_tenants_table.php
+ │   │   ├── Factories
+ │   │       └── 📃 2025_xx_xx_create_tenants_table.php
+
 ```
 
 ---
+2025_xx_xx_create_tenants_table.php
