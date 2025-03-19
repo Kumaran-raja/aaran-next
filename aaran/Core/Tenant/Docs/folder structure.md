@@ -3,17 +3,17 @@
 ```
 🌍 Core/ 
  ├── 🏢 Tenant/
- │   ├── 📂 Modle/               
+ │   ├── 📂 Models/               
  │   │   └── 📃 Tenant.php           # Tenant model storing metadata
  │   ├──🗄️Database
  │   │   ├── 📂 Migrations
  │   │       └── 📃 2025_xx_xx_create_tenants_table.php
  │   │   ├── Seeders
- │   │       └── 📃 2025_xx_xx_create_tenants_table.php
+ │   │       └── 📃 TenantSeeder.php
  │   │   ├── Factories
- │   │       └── 📃 2025_xx_xx_create_tenants_table.php
+ │   │       └── 📃 
 
 ```
 
 ---
-2025_xx_xx_create_tenants_table.php
+

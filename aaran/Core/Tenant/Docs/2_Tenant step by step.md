@@ -9,14 +9,15 @@ This model will store tenant details like **name, domain, and database connectio
 Run the following command:
 
 ```sh
-php artisan make:model Core/Tenant/Tenant -m
+  php artisan make:model Core/Tenant/Models/Tenant -m
 ```
 
 Now, update the **Tenant Model** (`Core/Tenant/Tenant.php`):
 
 ```php
-namespace Core\Tenant;
+namespace Aaran\Core\Tenant\Models;
 
+use Aaran\Auth\Identity\Models\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Tenant extends Model
@@ -44,7 +45,7 @@ return new class extends Migration {
             $table->string('name')->unique();
             $table->string('domain')->unique();
             $table->string('database')->unique();
-            $table->enum('status', ['active', 'inactive'])->default('active');
+            $table->tinyInteger('active_id')->nullable();
             $table->timestamps();
         });
     }
@@ -58,7 +59,7 @@ return new class extends Migration {
 
 Run migration:
 ```sh
-php artisan migrate
+  php artisan migrate
 ```
 
 ---
@@ -116,16 +117,17 @@ This middleware will **detect tenants from subdomains or custom domains**.
 
 Create a middleware:
 ```sh
-php artisan make:middleware TenantMiddleware
+  php artisan make:middleware TenantMiddleware
 ```
 
 Now update `app/Http/Middleware/TenantMiddleware.php`:
+
 ```php
 namespace App\Http\Middleware;
 
 use Closure;
-use Core\Tenant\Tenant;
-use Core\Tenant\TenantManager;
+use Aaran\Core\Tenant\Models\Tenant;
+use Aaran\Core\Tenant\Models\TenantManager;
 
 class TenantMiddleware
 {
@@ -146,10 +148,11 @@ class TenantMiddleware
 ```
 
 Register the middleware in `app/Http/Kernel.php`:
+
 ```php
 protected $middleware = [
     // Other global middleware...
-    \App\Http\Middleware\TenantMiddleware::class,
+    \Aaran\Core\Tenant\Http\Middleware\TenantMiddleware::class,
 ];
 ```
 
@@ -176,8 +179,9 @@ class TenantDatabaseManager
 ```
 
 Modify `Tenant` model to **trigger DB creation on saving**:
+
 ```php
-use Core\Tenant\TenantDatabaseManager;
+use Aaran\Core\Tenant\Models\TenantDatabaseManager;
 
 protected static function boot()
 {
@@ -199,11 +203,12 @@ php artisan make:controller TenantController
 ```
 
 Now update `app/Http/Controllers/TenantController.php`:
+
 ```php
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Core\Tenant\Tenant;
+use Aaran\Core\Tenant\Models\Tenant;
 
 class TenantController extends Controller
 {
@@ -244,12 +249,13 @@ php artisan make:command MigrateTenants
 ```
 
 Now update `app/Console/Commands/MigrateTenants.php`:
+
 ```php
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Core\Tenant\Tenant;
-use Core\Tenant\TenantManager;
+use Aaran\Core\Tenant\Models\Tenant;
+use Aaran\Core\Tenant\Models\TenantManager;
 use Illuminate\Support\Facades\Artisan;
 
 class MigrateTenants extends Command

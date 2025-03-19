@@ -3,7 +3,7 @@
 namespace Aaran\Auth\Identity\Http\Controllers;
 
 use Aaran\Auth\Identity\Services\UserService;
-use App\Http\Controllers\Controller;
+use Aaran\Core\Tenant\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
