@@ -1,9 +1,8 @@
 <?php
 
-use App\Models\User;
-use Livewire\Volt\Volt as LivewireVolt;
-
-uses(\Illuminate\Foundation\Testing\RefreshDatabase::class);
+use Aaran\Core\User\Models\User;
+use App\Livewire\Auth\Login;
+use Livewire\Livewire;
 
 test('login screen can be rendered', function () {
     $response = $this->get('/login');
@@ -14,7 +13,7 @@ test('login screen can be rendered', function () {
 test('users can authenticate using the login screen', function () {
     $user = User::factory()->create();
 
-    $response = LivewireVolt::test('auth.login')
+    $response = Livewire::test(Login::class)
         ->set('email', $user->email)
         ->set('password', 'password')
         ->call('login');
@@ -29,10 +28,12 @@ test('users can authenticate using the login screen', function () {
 test('users can not authenticate with invalid password', function () {
     $user = User::factory()->create();
 
-    $this->post('/login', [
-        'email' => $user->email,
-        'password' => 'wrong-password',
-    ]);
+    $response = Livewire::test(Login::class)
+        ->set('email', $user->email)
+        ->set('password', 'wrong-password')
+        ->call('login');
+
+    $response->assertHasErrors('email');
 
     $this->assertGuest();
 });
@@ -42,6 +43,7 @@ test('users can logout', function () {
 
     $response = $this->actingAs($user)->post('/logout');
 
-    $this->assertGuest();
     $response->assertRedirect('/');
+
+    $this->assertGuest();
 });

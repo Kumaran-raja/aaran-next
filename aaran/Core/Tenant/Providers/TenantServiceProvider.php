@@ -19,8 +19,9 @@ class TenantServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->registerConfigs();
         $this->registerMiddleware();
+
+        $this->registerConfigs();
         $this->registerRoutes();
         $this->registerMigrations();
         $this->registerViews();

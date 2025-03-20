@@ -2,28 +2,21 @@
 
 namespace Aaran\Core\User\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Aaran\Core\User\Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Str;
 
-class User extends Authenticatable
+class gdUser extends Authenticatable
 {
-
     use HasFactory, Notifiable;
 
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'email', 'password', 'mfa_enabled', 'mfa_method', 'mfa_secret'
     ];
 
-
     protected $hidden = [
-        'password',
-        'remember_token',
+        'password', 'remember_token', 'mfa_secret'
     ];
 
     protected function casts(): array
@@ -34,13 +27,22 @@ class User extends Authenticatable
         ];
     }
 
-    public function initials(): string
+    /**
+     * Check if the user has MFA enabled.
+     */
+    public function hasMfaEnabled()
     {
-        return Str::of($this->name)
-            ->explode(' ')
-            ->map(fn (string $name) => Str::of($name)->substr(0, 1))
-            ->implode('');
+        return $this->mfa_enabled;
     }
+
+    /**
+     * Check if the user is using an authenticator app.
+     */
+    public function hasAuthenticatorApp(): bool
+    {
+        return $this->mfa_method === 'authenticator_app';
+    }
+
 
     protected static function newFactory(): UserFactory
     {

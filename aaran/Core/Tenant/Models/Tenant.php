@@ -19,7 +19,9 @@ class Tenant extends Model
 
     public function getConfig($key, $default = null)
     {
-        return Arr::get($this->config, $key, $default);
+        $config = is_array($this->config) ? $this->config : json_decode($this->config, true);
+
+        return data_get($config, $key, $default);
     }
 
     public function users()
