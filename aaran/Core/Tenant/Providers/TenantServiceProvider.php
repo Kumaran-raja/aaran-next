@@ -14,7 +14,9 @@ class TenantServiceProvider extends ServiceProvider
 
     public function register()
     {
-        //
+        $this->app->singleton(TenantService::class, function ($app) {
+            return new TenantService();
+        });
     }
 
     public function boot()

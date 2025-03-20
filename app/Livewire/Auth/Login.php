@@ -2,6 +2,8 @@
 
 namespace App\Livewire\Auth;
 
+use Aaran\Core\Tenant\Models\Tenant;
+use Aaran\Core\User\Models\User;
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
@@ -32,12 +34,30 @@ class Login extends Component
 
         $this->ensureIsNotRateLimited();
 
-        if (! Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
+        // Get the tenant based on the request domain
+        $tenant = Tenant::where('domain', request()->getHost())->first();
+
+        if (!$tenant) {
+            $this->addError('email', __('Tenant not found.'));
+            return; // Stop execution here
+        }
+
+        // Ensure user exists within the correct tenant
+        $user = User::where('email', $this->email)
+            ->where('tenant_id', $tenant->id)
+            ->first();
+
+
+        if (!$user || !Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
             RateLimiter::hit($this->throttleKey());
 
-            throw ValidationException::withMessages([
-                'email' => __('auth.failed'),
-            ]);
+//            throw ValidationException::withMessages([
+//                'email' => __('auth.failed'),
+//            ]);
+
+            $this->addError('email', __('auth.failed'));
+            return; // Stop execution here
+
         }
 
         RateLimiter::clear($this->throttleKey());
@@ -51,7 +71,7 @@ class Login extends Component
      */
     protected function ensureIsNotRateLimited(): void
     {
-        if (! RateLimiter::tooManyAttempts($this->throttleKey(), 5)) {
+        if (!RateLimiter::tooManyAttempts($this->throttleKey(), 5)) {
             return;
         }
 
@@ -72,6 +92,6 @@ class Login extends Component
      */
     protected function throttleKey(): string
     {
-        return Str::transliterate(Str::lower($this->email).'|'.request()->ip());
+        return Str::transliterate(Str::lower($this->email) . '|' . request()->ip());
     }
 }

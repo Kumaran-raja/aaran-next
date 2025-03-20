@@ -38,7 +38,9 @@ class T04_MultiTenantAuthTest extends TestCase
         // Dump response for debugging
 //        $response->dump(); // <-- Add this to see actual response
 
-        $response->assertSessionHasErrors(['email']); // Ensure login fails
+//        $response->assertSessionHasErrors(['email']); // Ensure login fails
+        //$response->assertInvalid(['email']); // Updated method for newer Laravel versions
+        $response->assertSeeLivewireErrors(['email']);
         $this->assertGuest(); // User should not be authenticated
     }
 
