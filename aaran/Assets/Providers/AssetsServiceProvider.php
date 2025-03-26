@@ -28,13 +28,13 @@ class AssetsServiceProvider extends ServiceProvider
 
     public function getConfig(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../Config/config.php', 'aaran-app');
-        $this->mergeConfigFrom(__DIR__ . '/../Config/software.php', 'software');
-        $this->mergeConfigFrom(__DIR__ . '/../Config/clients.php', 'clients');
+        $this->mergeConfigFrom(__DIR__ . '/../config.php', 'aaran-app');
+        $this->mergeConfigFrom(__DIR__ . '/../software.php', 'software');
+        $this->mergeConfigFrom(__DIR__ . '/../clients.php', 'clients');
 
-        $this->mergeConfigFrom(__DIR__ . '/../Config/Settings/developer.php', 'developer');
-        $this->mergeConfigFrom(__DIR__ . '/../Config/Settings/garment.php', 'garment');
-        $this->mergeConfigFrom(__DIR__ . '/../Config/Settings/offset.php', 'offset');
+        $this->mergeConfigFrom(__DIR__ . '/../Settings/developer.php', 'developer');
+        $this->mergeConfigFrom(__DIR__ . '/../Settings/garment.php', 'garment');
+        $this->mergeConfigFrom(__DIR__ . '/../Settings/offset.php', 'offset');
     }
 
     protected function loadMigrations(): void

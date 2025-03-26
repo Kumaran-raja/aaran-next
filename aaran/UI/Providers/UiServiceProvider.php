@@ -8,11 +8,11 @@ use Illuminate\Support\ServiceProvider;
 class UiServiceProvider extends ServiceProvider
 {
     protected string $moduleName = 'Ui';
-    protected string $moduleNameLower = 'Ui';
+    protected string $moduleNameLower = 'ui';
 
     public function register()
     {
-        $this->app->register(UiServiceProvider::class);
+        $this->app->register(UiRouteServiceProvider::class);
     }
 
     public function boot()
@@ -39,7 +39,9 @@ class UiServiceProvider extends ServiceProvider
         View::share('layout', 'Aaran::app');
 
         $this->loadViewsFrom(__DIR__ . '/../Layouts', 'Aaran');
+
         $this->loadViewsFrom(__DIR__ . '/../Components', $this->moduleNameLower);
+
         $this->loadViewsFrom(__DIR__ . '/../Livewire', $this->moduleNameLower);
         $this->loadViewsFrom(__DIR__ . '/../Pages', $this->moduleNameLower);
 

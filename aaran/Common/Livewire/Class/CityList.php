@@ -2,7 +2,7 @@
 
 namespace Aaran\Common\Livewire\Class;
 
-//use Aaran\Assets\Trait\CommonTrait;
+use Aaran\Assets\Trait\CommonTrait;
 use Aaran\Common\Models\City;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Validate;
@@ -10,7 +10,7 @@ use Livewire\Component;
 
 class CityList extends Component
 {
-//    use CommonTrait;
+    use CommonTrait;
 
     #[Validate]
     public string $vname = '';
@@ -90,13 +90,10 @@ class CityList extends Component
     #region[getList]
     public function getList()
     {
-//        return City::search($this->searches)
-//            ->where('active_id', '=', $this->activeRecord)
-//            ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
-//            ->paginate($this->perPage);
-
-        return City::all();
-
+        return City::search($this->searches)
+            ->where('active_id', '=', $this->activeRecord)
+            ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+            ->paginate($this->perPage);
     }
     #endregion
 
