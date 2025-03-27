@@ -24,16 +24,16 @@
                 <div class="text-3xl uppercase font-bold">{{$cmp->get('company_name')}}</div>
                 <div class="flex-col flex text-xs space-y-0.5 text-gray-600 justify-center items-center">
                     <div class="text-xs inline-flex items-center space-x-2">
-                        <x-aaran-ui::icons.icon-fill iconfill="location" class="w-4 h-3 fill-gray-600"/>
+                        <x-Ui::icons.icon-fill iconfill="location" class="w-4 h-3 fill-gray-600"/>
                         <span>{{$cmp->get('address_1')}},{{$cmp->get('address_2')}},</span></div>
                     <div class="text-xs pl-6">{{$cmp->get('city')}}</div>
                     <div class="text-xs inline-flex items-center space-x-2">
-                        <x-aaran-ui::icons.icon-fill iconfill="phone1" class="w-3 h-3 fill-gray-600"/>
+                        <x-Ui::icons.icon-fill iconfill="phone1" class="w-3 h-3 fill-gray-600"/>
                         <span>{{$cmp->get('contact')}}</span> -
-                        <x-aaran-ui::icons.icon-fill iconfill="envelope" class="w-3 h-3 fill-gray-600"/>
+                        <x-Ui::icons.icon-fill iconfill="envelope" class="w-3 h-3 fill-gray-600"/>
                         <span>{{$cmp->get('email')}}</span></div>
                     <div class="text-xs inline-flex items-center space-x-2">
-                        <x-aaran-ui::icons.icon-fill iconfill="e-inv" class="w-3 h-3 fill-gray-600"/>
+                        <x-Ui::icons.icon-fill iconfill="e-inv" class="w-3 h-3 fill-gray-600"/>
                         <span>{{$cmp->get('gstin')}}</span></div>
                 </div>
             </div>
@@ -544,16 +544,16 @@
                 <div class="text-3xl uppercase font-bold">{{$cmp->get('company_name')}}</div>
                 <div class="flex-col flex text-xs space-y-0.5 text-gray-600 justify-center items-center">
                     <div class="text-xs inline-flex items-center space-x-2">
-                        <x-aaran-ui::icons.icon-fill iconfill="location" class="w-4 h-3 fill-gray-600"/>
+                        <x-Ui::icons.icon-fill iconfill="location" class="w-4 h-3 fill-gray-600"/>
                         <span>{{$cmp->get('address_1')}},{{$cmp->get('address_2')}},</span></div>
                     <div class="text-xs pl-6">{{$cmp->get('city')}}</div>
                     <div class="text-xs inline-flex items-center space-x-2">
-                        <x-aaran-ui::icons.icon-fill iconfill="phone1" class="w-3 h-3 fill-gray-600"/>
+                        <x-Ui::icons.icon-fill iconfill="phone1" class="w-3 h-3 fill-gray-600"/>
                         <span>{{$cmp->get('contact')}}</span> -
-                        <x-aaran-ui::icons.icon-fill iconfill="envelope" class="w-3 h-3 fill-gray-600"/>
+                        <x-Ui::icons.icon-fill iconfill="envelope" class="w-3 h-3 fill-gray-600"/>
                         <span>{{$cmp->get('email')}}</span></div>
                     <div class="text-xs inline-flex items-center space-x-2">
-                        <x-aaran-ui::icons.icon-fill iconfill="e-inv" class="w-3 h-3 fill-gray-600"/>
+                        <x-Ui::icons.icon-fill iconfill="e-inv" class="w-3 h-3 fill-gray-600"/>
                         <span>{{$cmp->get('gstin')}}</span></div>
                 </div>
             </div>
@@ -1062,16 +1062,16 @@
                 <div class="text-3xl uppercase font-bold">{{$cmp->get('company_name')}}</div>
                 <div class="flex-col flex text-xs space-y-0.5 text-gray-600 justify-center items-center">
                     <div class="text-xs inline-flex items-center space-x-2">
-                        <x-aaran-ui::icons.icon-fill iconfill="location" class="w-4 h-3 fill-gray-600"/>
+                        <x-Ui::icons.icon-fill iconfill="location" class="w-4 h-3 fill-gray-600"/>
                         <span>{{$cmp->get('address_1')}},{{$cmp->get('address_2')}},</span></div>
                     <div class="text-xs pl-6">{{$cmp->get('city')}}</div>
                     <div class="text-xs inline-flex items-center space-x-2">
-                        <x-aaran-ui::icons.icon-fill iconfill="phone1" class="w-3 h-3 fill-gray-600"/>
+                        <x-Ui::icons.icon-fill iconfill="phone1" class="w-3 h-3 fill-gray-600"/>
                         <span>{{$cmp->get('contact')}}</span> -
-                        <x-aaran-ui::icons.icon-fill iconfill="envelope" class="w-3 h-3 fill-gray-600"/>
+                        <x-Ui::icons.icon-fill iconfill="envelope" class="w-3 h-3 fill-gray-600"/>
                         <span>{{$cmp->get('email')}}</span></div>
                     <div class="text-xs inline-flex items-center space-x-2">
-                        <x-aaran-ui::icons.icon-fill iconfill="e-inv" class="w-3 h-3 fill-gray-600"/>
+                        <x-Ui::icons.icon-fill iconfill="e-inv" class="w-3 h-3 fill-gray-600"/>
                         <span>{{$cmp->get('gstin')}}</span></div>
                 </div>
             </div>

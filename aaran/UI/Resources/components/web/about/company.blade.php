@@ -15,7 +15,7 @@
     </div>
     <div class=" flex-col flex sm:gap-y-8 gap-y-6 sm:py-8 pt-12">
 
-        <x-aaran-ui::web.home-new.items.heading label="OUR COMPANY"/>
+        <x-Ui::web.home-new.items.heading label="OUR COMPANY"/>
 
         <div class="sm:text-5xl text-xl font-semibold animate__animated wow animate__backInRight"
              data-wow-duration="3s">

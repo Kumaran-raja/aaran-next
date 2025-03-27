@@ -10,7 +10,7 @@
 {{--                <span class="sm:h-2 sm:px-4 sm:bg-gradient-to-r from-[#070609] to-white ">&nbsp;</span>--}}
 {{--            </div>--}}
 
-            <x-aaran-ui::web.home-new.items.heading label="Run your business from anywhere." />
+            <x-Ui::web.home-new.items.heading label="Run your business from anywhere." />
             <div class="sm:text-5xl text-md font-bold pb-6 border-b border-black animate__animated wow animate__bounceInDown"
                  data-wow-duration="3s">
                 More than 500+ Business Owner Trust our GST Software.
@@ -25,10 +25,10 @@
             </div>
 
             <div class="animate__animated wow bounceInUp" data-wow-duration="3s">
-                <x-aaran-ui::rating.star class="sm:w-16 w-3 h-auto "/>
+                <x-Ui::rating.star class="sm:w-16 w-3 h-auto "/>
             </div>
 
-            <x-aaran-ui::button.animate1>Get it now</x-aaran-ui::button.animate1>
+            <x-Ui::button.animate1>Get it now</x-Ui::button.animate1>
 
         </div>
 

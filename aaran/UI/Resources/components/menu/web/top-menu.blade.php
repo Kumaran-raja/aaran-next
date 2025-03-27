@@ -4,7 +4,7 @@
      aria-label="penguin ui menu">
     <!-- Brand Logo -->
     <a href="#" class="text-3xl gap-4 inline-flex items-center">
-        <span> <x-aaran-ui::logo.cxlogo icon="dark" class="w-auto h-10 block"/></span>
+        <span> <x-Ui::logo.cxlogo icon="dark" class="w-auto h-10 block"/></span>
         <span
             class="hover:scale-110 hover:tracking-wide hover:font-bold hover:text-black hover:underline duration-300 transition-all ease-out">
                 {{ config('aaran-app.brand') }}

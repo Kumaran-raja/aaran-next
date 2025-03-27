@@ -35,9 +35,9 @@
 
                     <footer class="flex justify-end px-2 py-4 mt-3 bg-gray-200 rounded-b-md gap-3">
 
-                        <x-aaran-ui::button.back-x wire:click.prevent="clearAll" />
+                        <x-Ui::button.back-x wire:click.prevent="clearAll" />
 
-                        <x-aaran-ui::button.save-x wire:click.prevent="save" />
+                        <x-Ui::button.save-x wire:click.prevent="save" />
                     </footer>
                 </div>
             </div>

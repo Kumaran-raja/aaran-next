@@ -7,7 +7,7 @@
                                 text-gray-500 hover:text-gray-200 border-l-4 border-transparent hover:border-blue-500 px-4 group">
 
                         <span class="inline-flex justify-center items-center space-x-3">
-                            <x-aaran-ui::icons.icon-fill iconfill="master-menu" :colour="'#6B7280'" class="w-4 h-auto block fill-gray-500 group-hover:fill-blue-500"/>
+                            <x-Ui::icons.icon-fill iconfill="master-menu" :colour="'#6B7280'" class="w-4 h-auto block fill-gray-500 group-hover:fill-blue-500"/>
                             <span
                                 class="flex font-semibold text-sm tracking-wide truncate my-4 font-sans uppercase">
                                 Master

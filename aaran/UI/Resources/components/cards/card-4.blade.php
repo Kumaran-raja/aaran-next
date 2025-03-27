@@ -17,7 +17,7 @@
             <div class="p-3 h-full justify-evenly flex flex-col">
                 <div class="flex items-center mb-2">
 
-                    <x-aaran-ui::icons.icon icon="globe" class="h-6 w-auto text-slate-600"/>
+                    <x-Ui::icons.icon icon="globe" class="h-6 w-auto text-slate-600"/>
 
                     <div class="w-full flex justify-between text-xs items-center">
 
@@ -26,7 +26,7 @@
                         </h5>
 
                         <button class="text-gray-500" @click="open = true">
-                            <x-aaran-ui::icons.icon icon="eye" class="h-6 w-auto text-slate-600"/>
+                            <x-Ui::icons.icon icon="eye" class="h-6 w-auto text-slate-600"/>
                         </button>
 
                     </div>
@@ -61,7 +61,7 @@
                                 <th class="border-r">Amount</th>
                                 <th class="border-r">Type</th>
                                 <th>
-                                    <x-aaran-ui::icons.icon :icon="'chevrons-up'" class="w-4 h-4"/>
+                                    <x-Ui::icons.icon :icon="'chevrons-up'" class="w-4 h-4"/>
                                 </th>
                             </tr>
                             @foreach($data as $payment)
@@ -76,7 +76,7 @@
 
                                         <td class="border-r">{{ $payment->mode->vname }}</td>
                                         <td>
-                                            <x-aaran-ui::icons.icon :icon="'chevrons-down'" class="w-4 h-4"/>
+                                            <x-Ui::icons.icon :icon="'chevrons-down'" class="w-4 h-4"/>
                                         </td>
                                     @endif
 
@@ -104,13 +104,13 @@
                         <div class="gap-0.5">
                             <button wire:click="edit({{ $row->id }})" class="rounded-md ">
 
-                                <x-aaran-ui::icons.icon :icon="'pencil'"
+                                <x-Ui::icons.icon :icon="'pencil'"
                                               class="block w-auto h-5 text-cyan-700 hover:scale-110"/>
                             </button>
 
                             <button wire:click="getDelete({{ $row->id }})" class="rounded-md ">
 
-                                <x-aaran-ui::icons.icon :icon="'trash'"
+                                <x-Ui::icons.icon :icon="'trash'"
                                               class="block w-auto h-5 text-cyan-700 hover:scale-110"/>
                             </button>
                         </div>

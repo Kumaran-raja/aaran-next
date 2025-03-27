@@ -1,5 +1,5 @@
 <!-- Delete Record -->
-<x-aaran-ui::modal.confirmation wire:model.defer="showDeleteModal">
+<x-Ui::modal.confirmation wire:model.defer="showDeleteModal">
     <x-slot name="title">Delete Entry</x-slot>
     <x-slot name="content">
         <div class="py-8 text-cool-gray-700 ">Are you sure you? This action is irreversible.</div>
@@ -17,8 +17,8 @@
 
 {{--            <x-button.danger wire:click.prevent="trashData">Delete</x-button.danger>--}}
 
-            <x-aaran-ui::button.cancel-x wire:click.prevent="$set('showDeleteModal', false)" />
-            <x-aaran-ui::button.danger-x wire:click.prevent="trashData($id)" />
+            <x-Ui::button.cancel-x wire:click.prevent="$set('showDeleteModal', false)" />
+            <x-Ui::button.danger-x wire:click.prevent="trashData($id)" />
         </div>
     </x-slot>
-</x-aaran-ui::modal.confirmation>
+</x-Ui::modal.confirmation>

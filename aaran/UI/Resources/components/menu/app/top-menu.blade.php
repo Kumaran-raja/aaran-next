@@ -35,7 +35,7 @@ shadow-md print:hidden">
             <div class="sm:flex sm:items-center ">
                 <!-- Settings Dropdown -->
                 <div class="ml-3 relative">
-                    <x-aaran-ui::jet.dropdown align="right" width="48">
+                    <x-Ui::jet.dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @auth
 {{--                                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())--}}
@@ -72,11 +72,11 @@ shadow-md print:hidden">
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-aaran-ui::jet.dropdown-link
+                            <x-Ui::jet.dropdown-link
 {{--                                href="{{ route('profile.show') }}"--}}
                             >
                                 {{ __('Profile') }}
-                            </x-aaran-ui::jet.dropdown-link>
+                            </x-Ui::jet.dropdown-link>
 
                             {{--                            @if (Laravel\Jetstream\Jetstream::hasApiFeatures())--}}
                             {{--                                <x-dropdown-link href="{{ route('api-tokens.index') }}">--}}
@@ -88,14 +88,14 @@ shadow-md print:hidden">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
 
-                                <x-aaran-ui::jet.dropdown-link href="{{ route('logout') }}"
+                                <x-Ui::jet.dropdown-link href="{{ route('logout') }}"
                                                  onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                     {{ __('Log Out') }}
-                                </x-aaran-ui::jet.dropdown-link>
+                                </x-Ui::jet.dropdown-link>
                             </form>
                         </x-slot>
-                    </x-aaran-ui::jet.dropdown>
+                    </x-Ui::jet.dropdown>
                 </div>
             </div>
 

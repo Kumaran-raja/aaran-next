@@ -9,7 +9,7 @@ class AssetsServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../Resources', 'aaran-ui'); // Important: Load views from module
+//        $this->loadViewsFrom(__DIR__ . '/../Resources', 'aaran-ui'); // Important: Load views from module
 
         $this->getComponent();
         $this->getConfig();

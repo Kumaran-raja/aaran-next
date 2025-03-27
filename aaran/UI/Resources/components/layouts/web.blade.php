@@ -22,7 +22,7 @@
 
 <div class="w-full bg-gray-50">
 
-    {{--    <x-aaran-ui::menu.web.top-menu/>--}}
+    {{--    <x-Ui::menu.web.top-menu/>--}}
 
     <!-- Page Content -->
     <main class="w-full">

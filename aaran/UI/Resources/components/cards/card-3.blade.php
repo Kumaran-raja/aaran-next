@@ -58,7 +58,7 @@
                             <th class="border-r">Amount</th>
                             <th class="border-r">Type</th>
                             <th>
-                                <x-aaran-ui::icons.icon :icon="'chevrons-up'" class="w-4 h-4"/>
+                                <x-Ui::icons.icon :icon="'chevrons-up'" class="w-4 h-4"/>
                             </th>
                         </tr>
 
@@ -73,7 +73,7 @@
                                     <td class="border-r">{{ $payment->vname }}</td>
                                     <td class="border-r">{{ $payment->mode->vname }}</td>
                                     <td>
-                                        <x-aaran-ui::icons.icon :icon="'chevrons-down'" class="w-4 h-4"/>
+                                        <x-Ui::icons.icon :icon="'chevrons-down'" class="w-4 h-4"/>
                                     </td>
                                 @endif
 

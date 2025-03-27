@@ -7,6 +7,6 @@
     <span class="relative block group-hover:hidden group-hover:text-white text-white  font-semibold">Add</span>
     <span
         class="relative hidden group-hover:block group-hover:text-white text-green-800 left-5">
-                  <x-aaran-ui::icons.add/>
+                  <x-Ui::icons.add/>
                 </span>
 </button>

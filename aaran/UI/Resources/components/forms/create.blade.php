@@ -6,12 +6,12 @@
 
 <form wire:submit.prevent="save">
     <div class="w-full h-auto">
-        <x-aaran-ui::jet.modal wire:model.defer="showEditModal" maxWidth="{{{$maxWidth}}}" >
+        <x-Ui::jet.modal wire:model.defer="showEditModal" maxWidth="{{{$maxWidth}}}" >
             <div class="sm:px-6 px-2 pt-4">
                 <div class="text-lg">
                     {{$id === "" ? 'New Entry' : 'Edit Entry'}}
                 </div>
-                <x-aaran-ui::forms.section-border class="py-2"/>
+                <x-Ui::forms.section-border class="py-2"/>
                 <div class="mt-5">
                     {{$slot}}
                 </div>
@@ -35,12 +35,12 @@
                     </div>
                     <div class="flex gap-3">
 {{--                        <x-button.cancel/>--}}
-                        <x-aaran-ui::button.cancel-x wire:click.prevent="$set('showEditModal', false)" {{$attributes}} />
+                        <x-Ui::button.cancel-x wire:click.prevent="$set('showEditModal', false)" {{$attributes}} />
 {{--                        <x-button.save/>--}}
-                        <x-aaran-ui::button.save-x  wire:click.prevent="save" />
+                        <x-Ui::button.save-x  wire:click.prevent="save" />
                     </div>
                 </div>
             </div>
-        </x-aaran-ui::jet.modal>
+        </x-Ui::jet.modal>
     </div>
 </form>

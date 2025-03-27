@@ -6,7 +6,7 @@
     <div class="flex justify-between px-5 py-6">
         <a href="{{route('dashboard')}}" class="flex gap-3">
 
-            <x-aaran-ui::logo.cxlogo :icon="'dark'" class="h-10 w-auto block"/>
+            <x-Ui::logo.cxlogo :icon="'dark'" class="h-10 w-auto block"/>
 
             <span class="font-bold text-2xl sm:text-3xl tracking-widest">Codexsun</span>
         </a>
@@ -42,35 +42,35 @@
             {{--            @endif--}}
 
             @if(\Aaran\Assets\Features\Customise::hasCommon())
-                <x-aaran-ui::menu.app.sub.common/>
+                <x-Ui::menu.app.sub.common/>
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasMAster())
-                <x-aaran-ui::menu.app.sub.master/>
+                <x-Ui::menu.app.sub.master/>
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasEntries())
-                <x-aaran-ui::menu.app.sub.entries/>
+                <x-Ui::menu.app.sub.entries/>
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasTransaction())
-                <x-aaran-ui::menu.app.sub.transaction/>
+                <x-Ui::menu.app.sub.transaction/>
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasCore())
-                <x-aaran-ui::menu.app.sub.core/>
+                <x-Ui::menu.app.sub.core/>
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasBooks())
-                <x-aaran-ui::menu.app.sub.books/>
+                <x-Ui::menu.app.sub.books/>
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasBlog())
-                <x-aaran-ui::menu.app.sub.blog/>
+                <x-Ui::menu.app.sub.blog/>
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasReport())
-                <x-aaran-ui::menu.app.sub.reports/>
+                <x-Ui::menu.app.sub.reports/>
             @endif
 
             {{--            @if(Aaran\Aadmin\Src\Customise::hasReport())--}}
@@ -91,7 +91,7 @@
 
 
 
-            <x-aaran-ui::menu.app.sub.logout/>
+            <x-Ui::menu.app.sub.logout/>
 
         </ul>
     </div>

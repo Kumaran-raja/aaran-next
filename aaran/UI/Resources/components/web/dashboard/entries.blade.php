@@ -19,51 +19,51 @@
     <div class="flex-col flex h-[24rem] px-2 overflow-y-auto">
 
         <a href="{{route('sales')}}">
-            <x-aaran-ui::web.dashboard.entries_list
+            <x-Ui::web.dashboard.entries_list
                 entry="Sales"
 {{--                date="{{$entries['sales_date']}}"--}}
 {{--                invoice="INV - {{$entries['sales_no']}}"--}}
 {{--                amount="{{$entries['sales']}}"--}}
                 color="text-[#23B7E5]"
             >
-                <x-aaran-ui::icons.sales/>
-            </x-aaran-ui::web.dashboard.entries_list>
+                <x-Ui::icons.sales/>
+            </x-Ui::web.dashboard.entries_list>
         </a>
 
         <a href="{{route('purchase')}}">
-            <x-aaran-ui::web.dashboard.entries_list
+            <x-Ui::web.dashboard.entries_list
                 entry="Purchase"
 {{--                date="{{$entries['purchase_date']}}"--}}
 {{--                invoice="INV - {{$entries['purchase_no']}}"--}}
 {{--                amount="{{$entries['purchase']}}"--}}
                 color="text-[#845ADF]"
             >
-                <x-aaran-ui::icons.purchase/>
-            </x-aaran-ui::web.dashboard.entries_list>
+                <x-Ui::icons.purchase/>
+            </x-Ui::web.dashboard.entries_list>
         </a>
 
         <a href="{{route('transactions',[2])}}">
-            <x-aaran-ui::web.dashboard.entries_list
+            <x-Ui::web.dashboard.entries_list
                 entry="Payment"
 {{--                date="{{$entries['payment_date']}}"--}}
 {{--                invoice=""--}}
 {{--                amount="{{$entries['payment']}}"--}}
                 color="text-[#E6533C]"
             >
-                <x-aaran-ui::icons.payment/>
-            </x-aaran-ui::web.dashboard.entries_list>
+                <x-Ui::icons.payment/>
+            </x-Ui::web.dashboard.entries_list>
         </a>
 
         <a href="{{route('transactions',[1])}}">
-            <x-aaran-ui::web.dashboard.entries_list
+            <x-Ui::web.dashboard.entries_list
                 entry="Receipt"
 {{--                date="{{$entries['receipt_date']}}"--}}
 {{--                invoice=""--}}
 {{--                amount="{{$entries['receipt']}}"--}}
                 color="text-[#F5B849]"
             >
-                <x-aaran-ui::icons.receipt/>
-            </x-aaran-ui::web.dashboard.entries_list>
+                <x-Ui::icons.receipt/>
+            </x-Ui::web.dashboard.entries_list>
         </a>
     </div>
 

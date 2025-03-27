@@ -11,6 +11,6 @@
                 Success isn’t a straight line. We acknowledge our mistakes and learn from them to move us closer to where we want to go.
             </div>
         </div>
-        <x-aaran-ui::web.home-new.footer-address/>
+        <x-Ui::web.home-new.footer-address/>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<x-aaran-ui::forms.m-panel :margin="'my-12'">
+<x-Ui::forms.m-panel :margin="'my-12'">
     <div class="border-gray-300">
         <div class="font-merri w-full mx-auto text-xl py-4 border-b border-gray-300">Color Palette</div>
 
@@ -9,9 +9,9 @@
                     Primary
                 </div>
                 <div class="w-40 bg-[#007BFF] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #007BFF
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -19,9 +19,9 @@
                     Secondary
                 </div>
                 <div class="w-40 bg-[#6c757d] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #6c757d
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
 
             </div>
@@ -30,9 +30,9 @@
                     Info
                 </div>
                 <div class="w-40 bg-[#17A2B8] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #17A2B8
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
 
             </div>
@@ -41,9 +41,9 @@
                     Success
                 </div>
                 <div class="w-40 bg-[#28a745] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #28a745
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
 
             </div>
@@ -52,9 +52,9 @@
                     Warning
                 </div>
                 <div class="w-40 bg-[#ffc107] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #ffc107
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
 
             </div>
@@ -63,9 +63,9 @@
                     Danger
                 </div>
                 <div class="w-40 bg-[#dc3545] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #dc3545
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
         </div>
@@ -76,9 +76,9 @@
                     Black
                 </div>
                 <div class="w-40 bg-[#000000] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #000000
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -86,9 +86,9 @@
                     Gray Dark
                 </div>
                 <div class="w-40 bg-[#343a40] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #343a40
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -96,9 +96,9 @@
                     Gray
                 </div>
                 <div class="w-40 bg-[#adb5bd] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #adb5bd
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -106,9 +106,9 @@
                     Light
                 </div>
                 <div class="w-40 bg-[#1f2d3d] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #1f2d3d
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
         </div>
@@ -119,9 +119,9 @@
                     Indigo
                 </div>
                 <div class="w-40 bg-[#6610f2] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #6610f2
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -129,9 +129,9 @@
                     Lightblue
                 </div>
                 <div class="w-40 bg-[#3c8dbc] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #3c8dbc
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -139,9 +139,9 @@
                     Navy
                 </div>
                 <div class="w-40 bg-[#001f3f] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #001f3f
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -149,9 +149,9 @@
                     Purple
                 </div>
                 <div class="w-40 bg-[#605ca8] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #605ca8
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -159,9 +159,9 @@
                     Fuchsia
                 </div>
                 <div class="w-40 bg-[#f012be] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #f012be
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -169,9 +169,9 @@
                     Pink
                 </div>
                 <div class="w-40 bg-[#e83e8c] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #e83e8c
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -179,9 +179,9 @@
                     Maroon
                 </div>
                 <div class="w-40 bg-[#d81b60] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #d81b60
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -189,9 +189,9 @@
                     Orange
                 </div>
                 <div class="w-40 bg-[#ff851b] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #ff851b
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -199,9 +199,9 @@
                     Lime
                 </div>
                 <div class="w-40 bg-[#01ff70] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #01ff70
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -209,9 +209,9 @@
                     Teal
                 </div>
                 <div class="w-40 bg-[#39cccc] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #39cccc
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
             <div class="flex-col flex justify-center items-center font-roboto tracking-wider">
@@ -219,13 +219,13 @@
                     Olive
                 </div>
                 <div class="w-40 bg-[#3d9970] px-2 py-2 rounded-b-md">
-                    <x-aaran-ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
+                    <x-Ui::interactions.clip class="text-white" :color="'text-white'" :size="'text-xs'">
                         #3d9970
-                    </x-aaran-ui::interactions.clip>
+                    </x-Ui::interactions.clip>
                 </div>
             </div>
         </div>
 
     </div>
-</x-aaran-ui::forms.m-panel>
+</x-Ui::forms.m-panel>
 

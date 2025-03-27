@@ -1,4 +1,4 @@
-<x-aaran-ui::menu.app.base.li-menuitem :routes="'accountHeads'" :label="'Account Heads'"/>
-<x-aaran-ui::menu.app.base.li-menuitem :routes="'ledgerGroups'" :label="'Ledger Groups'"/>
-<x-aaran-ui::menu.app.base.li-menuitem :routes="'ledgers'" :label="'Ledgers'"/>
+<x-Ui::menu.app.base.li-menuitem :routes="'accountHeads'" :label="'Account Heads'"/>
+<x-Ui::menu.app.base.li-menuitem :routes="'ledgerGroups'" :label="'Ledger Groups'"/>
+<x-Ui::menu.app.base.li-menuitem :routes="'ledgers'" :label="'Ledgers'"/>
 
