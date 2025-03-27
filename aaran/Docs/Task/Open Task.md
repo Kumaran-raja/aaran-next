@@ -16,12 +16,11 @@
 - Pincode - @Hari
 - District - @Hari
 - AccountType - @Hari
-- Bank - @Saran
-- Category - @Saran
-- City - @Saran
-- Colour - @Saran
-- ContactType - @Saran
-- Department - @Saran
+- Bank - @Saran - Completed ✅
+- Category - @Saran - Completed ✅
+- Colour - @Saran - Completed ✅
+- ContactType - @Saran - Completed ✅
+- Department - @Saran - Completed ✅
 - Dispatch - @Srihari
 - Gst - @Srihari
 - Hsncode - @Srihari
