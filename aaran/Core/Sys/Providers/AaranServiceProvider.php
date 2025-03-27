@@ -20,6 +20,8 @@ class AaranServiceProvider extends ServiceProvider
     {
         $this->app->register(AssetsServiceProvider::class);
 
+        $this->app->register(UiServiceProvider::class);
+
         $this->app->register(SetupServiceProvider::class);
 
         $this->app->register(WebsiteProvider::class);

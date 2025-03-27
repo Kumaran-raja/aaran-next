@@ -17,7 +17,13 @@ class UiServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->registerViews();
+        $this->loadViewsFrom(__DIR__ . '/../Resources', 'Ui'); // Important: Load views from module
+
+        // Register a default layout globally
+        View::share('layout', 'Ui::layout.web');
+        View::share('layout', 'Ui::layout.app');
+
+
 //        $this->registerConfigs();
 //        $this->registerMigrations();
     }
