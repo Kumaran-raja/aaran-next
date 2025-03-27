@@ -22,11 +22,11 @@
 - Colour - @Saran
 - ContactType - @Saran
 - Department - @Saran
-- Dispatch - @Srihari - completed on 27.03.2003
+- Dispatch - @Srihari - completed on 27.03.2025
 - Gst - @Srihari - completed on 27.03.2025
 - Hsncode - @Srihari - completed on 27.03.2025
-- PaymentMode - @Srihari - completed on 27.03.2003
-- ReceiptType - @Srihari - completed on 27.03.2003
+- PaymentMode - @Srihari - completed on 27.03.2025
+- ReceiptType - @Srihari - completed on 27.03.2025
 - Size
 - TransactionType
 - Transport
