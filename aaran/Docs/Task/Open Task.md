@@ -11,11 +11,12 @@
 
 # Job -1 Common models
 - City - @sundar - Completed ✅
-- State - @Hari
-- Country - @Hari
-- Pincode - @Hari
-- District - @Hari
-- AccountType - @Hari
+
+- State - @Hari - Completed ✅
+- Country - @Hari - Completed ✅
+- Pincode - @Hari - Completed ✅
+- District - @Hari - Not avilable in Aaran BMS
+- AccountType - @Hari - Completed ✅
 - Bank - @Saran - Completed ✅
 - Category - @Saran - Completed ✅
 - Colour - @Saran - Completed ✅

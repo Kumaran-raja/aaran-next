@@ -28,9 +28,9 @@ class CommonServiceProvider extends ServiceProvider
 
         // Register Livewire components
         Livewire::component('common::city-list', Class\CityList::class);
-//        Livewire::component('common::state-list', State\StateList::class);
-//        Livewire::component('common::pincode-list', Pincode\PincodeList::class);
-//        Livewire::component('common::country-list', Country\CountryList::class);
+        Livewire::component('common::state-list', Class\StateList::class);
+        Livewire::component('common::pincode-list', Class\PincodeList::class);
+        Livewire::component('common::country-list', Class\CountryList::class);
 //        Livewire::component('common::hsncode-list', Hsncode\HsncodeList::class);
 //        Livewire::component('common::unit-list', Unit\UnitList::class);
         Livewire::component('common::category-list', Class\CategoryList::class);
@@ -44,7 +44,7 @@ class CommonServiceProvider extends ServiceProvider
 //        Livewire::component('common::dispatch-list', Dispatch\DispatchList::class);
         Livewire::component('common::contact-type-list', Class\ContactTypeList::class);
 //        Livewire::component('common::payment-mode-list', PaymentMode\PaymentModeList::class);
-//        Livewire::component('common::account-type-list', AccountType\AccountTypeList::class);
+        Livewire::component('common::account-type-list', Class\AccountTypeList::class);
 //        Livewire::component('common::transaction-type-list', TransactionType\TransactionTypeList::class);
 
     }
