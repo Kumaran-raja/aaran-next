@@ -11,7 +11,6 @@
 
 # Job -1 Common models
 - City - @sundar - Completed ✅
-
 - State - @Hari - Completed ✅
 - Country - @Hari - Completed ✅
 - Pincode - @Hari - Completed ✅
@@ -22,11 +21,11 @@
 - Colour - @Saran - Completed ✅
 - ContactType - @Saran - Completed ✅
 - Department - @Saran - Completed ✅
-- Dispatch - @Srihari
-- Gst - @Srihari
-- Hsncode - @Srihari
-- PaymentMode - @Srihari
-- ReceiptType - @Srihari
+- Dispatch - @Srihari - completed ✅ on 27.03.2025
+- Gst - @Srihari - completed ✅ on 27.03.2025
+- Hsncode - @Srihari - completed ✅ on 27.03.2025
+- PaymentMode - @Srihari - completed  ✅ on 27.03.2025
+- ReceiptType - @Srihari - completed  ✅ on 27.03.2025
 - Size
 - TransactionType
 - Transport
