@@ -2,41 +2,41 @@
 
 namespace Aaran\Common\Livewire\Class;
 
+
 use Aaran\Assets\Trait\CommonTrait;
-use Aaran\Common\Models\State;
+use Aaran\Common\Models\ReceiptType;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
-class StateList extends Component
+class ReceiptTypeList extends Component
 {
     use CommonTrait;
 
     #[Validate]
     public string $vname = '';
     public bool $active_id = true;
-    public $state_code;
 
     #region[Validation]
     public function rules(): array
     {
         return [
-            'vname' => 'required' . ($this->vid ? '' : '|unique:states,vname'),
+            'vname' => 'required' . ($this->vid ? '' : '|unique:receipttypes,vname'),
         ];
     }
 
     public function messages(): array
     {
         return [
-            'vname.required' => ':attribute is missing.',
-            'vname.unique' => 'This :attribute is already created.',
+            'vname.required' => 'The :attribute are missing.',
+            'vname.unique' => 'The :attribute is already created.',
         ];
     }
 
     public function validationAttributes(): array
     {
         return [
-            'vname' => 'state name',
+            'vname' => 'name',
         ];
     }
 
@@ -48,17 +48,15 @@ class StateList extends Component
         $this->validate();
 
         if ($this->vid == "") {
-            State::create([
+            ReceiptType::create([
                 'vname' => Str::ucfirst($this->vname),
-                'state_code' => $this->state_code,
                 'active_id' => $this->active_id,
             ]);
             $message = "Saved";
 
         } else {
-            $obj = State::find($this->vid);
+            $obj = ReceiptType::find($this->vid);
             $obj->vname = Str::ucfirst($this->vname);
-            $obj->state_code = $this->state_code;
             $obj->active_id = $this->active_id;
             $obj->save();
             $message = "Updated";
@@ -73,7 +71,6 @@ class StateList extends Component
     {
         $this->vid = '';
         $this->vname = '';
-        $this->state_code = '';
         $this->active_id = '1';
         $this->searches = '';
     }
@@ -83,10 +80,9 @@ class StateList extends Component
     public function getObj($id): void
     {
         if ($id) {
-            $obj = State::find($id);
+            $obj = ReceiptType::find($id);
             $this->vid = $obj->id;
             $this->vname = $obj->vname;
-            $this->state_code = $obj->state_code;
             $this->active_id = $obj->active_id;
         }
     }
@@ -95,7 +91,7 @@ class StateList extends Component
     #region[list]
     public function getList()
     {
-        return State::search($this->searches)
+        return ReceiptType::search($this->searches)
             ->where('active_id', '=', $this->activeRecord)
             ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
             ->paginate($this->perPage);
@@ -106,7 +102,7 @@ class StateList extends Component
     public function deleteFunction($id): void
     {
         if ($id) {
-            $obj = State::find($id);
+            $obj = ReceiptType::find($id);
             if ($obj) {
                 $obj->delete();
                 $message = "Deleted Successfully";
@@ -119,7 +115,7 @@ class StateList extends Component
     #region[render]
     public function render()
     {
-        return view('common::state-list')->with([
+        return view('common::receipt-type-list')->with([
             'list' => $this->getList()
         ]);
     }

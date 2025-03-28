@@ -3,25 +3,25 @@
 namespace Aaran\Common\Livewire\Class;
 
 use Aaran\Assets\Trait\CommonTrait;
-use Aaran\Common\Models\State;
+use Aaran\Common\Models\GstPercent;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
-class StateList extends Component
+class GstList extends Component
 {
     use CommonTrait;
 
     #[Validate]
     public string $vname = '';
     public bool $active_id = true;
-    public $state_code;
+    public $desc;
 
     #region[Validation]
     public function rules(): array
     {
         return [
-            'vname' => 'required' . ($this->vid ? '' : '|unique:states,vname'),
+            'vname' => 'required' . ($this->vid ? '' : '|unique:gst_percents,vname'),
         ];
     }
 
@@ -36,7 +36,7 @@ class StateList extends Component
     public function validationAttributes(): array
     {
         return [
-            'vname' => 'state name',
+            'vname' => 'gst percent',
         ];
     }
 
@@ -48,17 +48,17 @@ class StateList extends Component
         $this->validate();
 
         if ($this->vid == "") {
-            State::create([
+            GstPercent::create([
                 'vname' => Str::ucfirst($this->vname),
-                'state_code' => $this->state_code,
+                'desc' => $this->desc,
                 'active_id' => $this->active_id,
             ]);
             $message = "Saved";
 
         } else {
-            $obj = State::find($this->vid);
+            $obj = GstPercent::find($this->vid);
             $obj->vname = Str::ucfirst($this->vname);
-            $obj->state_code = $this->state_code;
+            $obj->desc = $this->desc;
             $obj->active_id = $this->active_id;
             $obj->save();
             $message = "Updated";
@@ -73,7 +73,7 @@ class StateList extends Component
     {
         $this->vid = '';
         $this->vname = '';
-        $this->state_code = '';
+        $this->desc = '';
         $this->active_id = '1';
         $this->searches = '';
     }
@@ -83,10 +83,10 @@ class StateList extends Component
     public function getObj($id): void
     {
         if ($id) {
-            $obj = State::find($id);
+            $obj = GstPercent::find($id);
             $this->vid = $obj->id;
             $this->vname = $obj->vname;
-            $this->state_code = $obj->state_code;
+            $this->desc = $obj->desc;
             $this->active_id = $obj->active_id;
         }
     }
@@ -95,7 +95,7 @@ class StateList extends Component
     #region[list]
     public function getList()
     {
-        return State::search($this->searches)
+        return GstPercent::search($this->searches)
             ->where('active_id', '=', $this->activeRecord)
             ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
             ->paginate($this->perPage);
@@ -106,7 +106,7 @@ class StateList extends Component
     public function deleteFunction($id): void
     {
         if ($id) {
-            $obj = State::find($id);
+            $obj = GstPercent::find($id);
             if ($obj) {
                 $obj->delete();
                 $message = "Deleted Successfully";
@@ -119,7 +119,7 @@ class StateList extends Component
     #region[render]
     public function render()
     {
-        return view('common::state-list')->with([
+        return view('common::gst-list')->with([
             'list' => $this->getList()
         ]);
     }
