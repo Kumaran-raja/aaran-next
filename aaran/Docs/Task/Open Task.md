@@ -11,22 +11,21 @@
 
 # Job -1 Common models
 - City - @sundar - Completed ✅
-- State - @Hari
-- Country - @Hari
-- Pincode - @Hari
-- District - @Hari
-- AccountType - @Hari
-- Bank - @Saran
-- Category - @Saran
-- City - @Saran
-- Colour - @Saran
-- ContactType - @Saran
-- Department - @Saran
-- Dispatch - @Srihari - completed on 27.03.2025
-- Gst - @Srihari - completed on 27.03.2025
-- Hsncode - @Srihari - completed on 27.03.2025
-- PaymentMode - @Srihari - completed on 27.03.2025
-- ReceiptType - @Srihari - completed on 27.03.2025
+- State - @Hari - Completed ✅
+- Country - @Hari - Completed ✅
+- Pincode - @Hari - Completed ✅
+- District - @Hari - Not avilable in Aaran BMS
+- AccountType - @Hari - Completed ✅
+- Bank - @Saran - Completed ✅
+- Category - @Saran - Completed ✅
+- Colour - @Saran - Completed ✅
+- ContactType - @Saran - Completed ✅
+- Department - @Saran - Completed ✅
+- Dispatch - @Srihari - completed ✅ on 27.03.2025
+- Gst - @Srihari - completed ✅ on 27.03.2025
+- Hsncode - @Srihari - completed ✅ on 27.03.2025
+- PaymentMode - @Srihari - completed  ✅ on 27.03.2025
+- ReceiptType - @Srihari - completed  ✅ on 27.03.2025
 - Size
 - TransactionType
 - Transport
