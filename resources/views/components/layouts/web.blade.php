@@ -9,10 +9,12 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet"/>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Styles / Scripts -->
+
     <style>
-        /*! tailwindcss v4.0.7 | MIT License | https://tailwindcss.com */
+
         @layer theme {
             :root, :host {
                 --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -1463,9 +1465,12 @@
     </style>
 </head>
 <body
-    class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
+    class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex items-center lg:justify-center min-h-screen flex-col">
 <div>
+    <x-Ui::menu.web.top-menu/>
     {{ $slot }}
+    <x-Ui::web.home-new.footer-address />
+    <x-Ui::web.home-new.copyright />
 </div>
 </body>
 </html>

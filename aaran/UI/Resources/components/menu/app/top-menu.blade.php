@@ -38,16 +38,16 @@ shadow-md print:hidden">
                     <x-Ui::jet.dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @auth
-{{--                                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())--}}
-{{--                                    <button--}}
-{{--                                        class="flex sm:text-sm text-xs border-2 border-gray-300 rounded-full--}}
-{{--                                        focus:outline-none focus:border-gray-300 transition">--}}
-{{--                                        <img class="h-10 w-10 rounded-full object-cover"--}}
-{{--                                             src="{{ Auth::user()->profile_photo_url }}"--}}
-{{--                                             alt="{{ Auth::user()->name }}"/>--}}
-{{--                                    </button>--}}
-{{--                                @else--}}
-                                    <span class="inline-flex rounded-md">
+                                {{--                                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())--}}
+                                {{--                                    <button--}}
+                                {{--                                        class="flex sm:text-sm text-xs border-2 border-gray-300 rounded-full--}}
+                                {{--                                        focus:outline-none focus:border-gray-300 transition">--}}
+                                {{--                                        <img class="h-10 w-10 rounded-full object-cover"--}}
+                                {{--                                             src="{{ Auth::user()->profile_photo_url }}"--}}
+                                {{--                                             alt="{{ Auth::user()->name }}"/>--}}
+                                {{--                                    </button>--}}
+                                {{--                                @else--}}
+                                <span class="inline-flex rounded-md">
                                     <button type="button"
                                             class="inline-flex items-center sm:px-3 px-1 sm:py-2 py-1 border border-gray-300 sm:text-sm text-xs
                                             leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
@@ -60,7 +60,7 @@ shadow-md print:hidden">
                                         </svg>
                                     </button>
                                 </span>
-{{--                                @endif--}}
+                                {{--                                @endif--}}
                             @endauth
                         </x-slot>
 
@@ -73,7 +73,7 @@ shadow-md print:hidden">
                             </div>
 
                             <x-Ui::jet.dropdown-link
-{{--                                href="{{ route('profile.show') }}"--}}
+                                {{--                                href="{{ route('profile.show') }}"--}}
                             >
                                 {{ __('Profile') }}
                             </x-Ui::jet.dropdown-link>
@@ -89,7 +89,7 @@ shadow-md print:hidden">
                                 @csrf
 
                                 <x-Ui::jet.dropdown-link href="{{ route('logout') }}"
-                                                 onclick="event.preventDefault();
+                                                         onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                     {{ __('Log Out') }}
                                 </x-Ui::jet.dropdown-link>
