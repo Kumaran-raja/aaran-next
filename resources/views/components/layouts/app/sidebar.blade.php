@@ -15,6 +15,17 @@
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
                 </flux:navlist.group>
+
+
+
+                <flux:navlist.group expandable heading="Common" class="lg:grid">
+                    <flux:navlist.item :href="route('cities')">City</flux:navlist.item>
+                    <flux:navlist.item :href="route('states')">States</flux:navlist.item>
+                    <flux:navlist.item :href="route('countries')">Countries</flux:navlist.item>
+                </flux:navlist.group>
+
+
+
             </flux:navlist>
 
             <flux:spacer />

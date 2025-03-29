@@ -11,10 +11,10 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $users = [
-            ['name' => 'SUNDAR', 'email' => 'sundar@sundar.com', 'password' => 'kalarani'],
-            ['name' => 'Developer', 'email' => 'developer@aaran.org', 'password' => '123456789'],
-            ['name' => 'audit', 'email' => 'audit@aaran.org', 'password' => '123456789'],
-            ['name' => 'demo', 'email' => 'demo@demo.com', 'password' => '123456789'],
+            ['name' => 'SUNDAR', 'email' => 'sundar@sundar.com', 'password' => 'kalarani', 'tenant_id' => '1'],
+            ['name' => 'Developer', 'email' => 'dev@aaran.org', 'password' => '123456789', 'tenant_id' => '2'],
+            ['name' => 'audit', 'email' => 'audit@aaran.org', 'password' => '123456789', 'tenant_id' => '1'],
+            ['name' => 'demo', 'email' => 'demo@demo.com', 'password' => '123456789', 'tenant_id' => '1'],
         ];
 
         foreach ($users as $row) {
@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
                 'password' => bcrypt($row['password']),
                 'email_verified_at' => now(),
                 'active_id' => '1',
-                'tenant_id' => '1',
+                'tenant_id' => $row['tenant_id'],
                 'remember_token' => Str::random(10),
             ]);
         }

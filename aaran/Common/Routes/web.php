@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 //Common
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth', 'tenant'])->group(function () {
 
     Route::get('/cities', Aaran\Common\Livewire\Class\CityList::class)->name('cities');
     Route::get('/states', Aaran\Common\Livewire\Class\StateList::class)->name('states');

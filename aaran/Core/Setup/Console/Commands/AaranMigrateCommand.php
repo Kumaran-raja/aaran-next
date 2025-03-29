@@ -10,12 +10,22 @@ use Illuminate\Support\Facades\File;
 
 class AaranMigrateCommand extends Command
 {
-    protected $signature = 'aaran:refresh {tenant}';
+    protected $signature = 'aaran:migrate {tenant} {--fresh} {--refresh} {--seed} {--force}';
     protected $description = 'Refresh migrations for a specific tenant';
 
     public function handle()
     {
         $arg = $this->argument('tenant');
+        $seed = $this->option('seed');
+
+
+        // Choose the correct migration command
+        $migrationCommand = 'migrate';
+        if ($this->option('fresh')) {
+            $migrationCommand = 'migrate:fresh';
+        } elseif ($this->option('refresh')) {
+            $migrationCommand = 'migrate:refresh';
+        }
 
         $tenant = Tenant::where('t_name', $arg)->first();
 
@@ -26,6 +36,7 @@ class AaranMigrateCommand extends Command
 
         // List of migration directories
         $paths = [
+            'aaran/Common/Database/Migrations',
             'aaran/Master/Contact/Database/Migrations',
         ];
 
@@ -39,11 +50,18 @@ class AaranMigrateCommand extends Command
 
             $this->info("Running migration for tenant: {$tenant->name}");
 
-            $this->migrate($path, $tenant);
+            $this->migrate($path, $tenant, $migrationCommand);
         }
+
+        // Run seeders if requested
+        if ($this->option('seed')) {
+            $this->seed($tenant);
+        }
+
+
     }
 
-    private function migrate($path, $tenant)
+    private function migrate($path, $tenant, $migrationCommand)
     {
         $migrationFiles = File::files($path);
 
@@ -58,7 +76,7 @@ class AaranMigrateCommand extends Command
         foreach ($migrationFiles as $file) {
             $migrationFile = str_replace(base_path(), '', $file->getRealPath());
 
-            Artisan::call('migrate', [
+            Artisan::call($migrationCommand, [
                 '--database' => 'tenant',
                 '--path' => $migrationFile,
                 '--force' => true,
@@ -69,4 +87,20 @@ class AaranMigrateCommand extends Command
 
         $this->info(Artisan::output());
     }
+
+    private function seed($tenant)
+    {
+        $service = new TenantDatabaseService();
+        $service->setTenantConnection($tenant);
+
+        Artisan::call('db:seed', [
+            '--database' => 'tenant',
+            '--class' => 'Aaran\Core\Setup\TenantDatabaseSeeder',
+            '--force' => $this->option('force'),
+        ]);
+
+        $this->info(Artisan::output());
+    }
+
+
 }

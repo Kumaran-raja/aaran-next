@@ -4,6 +4,7 @@ namespace Aaran\Core\Tenant\Providers;
 
 use Aaran\Core\Tenant\Http\Middleware\TenantMiddleware;
 use Aaran\Core\Tenant\Services\TenantDatabaseService;
+use Aaran\Core\Tenant\Services\TenantManagerService;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
@@ -17,6 +18,10 @@ class TenantServiceProvider extends ServiceProvider
     {
         $this->app->singleton(TenantDatabaseService::class, function ($app) {
             return new TenantDatabaseService();
+        });
+
+        $this->app->singleton(TenantManagerService::class, function ($app) {
+            return new TenantManagerService();
         });
     }
 

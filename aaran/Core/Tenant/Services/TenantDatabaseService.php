@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 use PDO;
 
 class TenantDatabaseService
@@ -150,5 +151,31 @@ class TenantDatabaseService
             JSON_ERROR_UTF8 => "Malformed UTF-8 characters.",
             default => "Unknown JSON error."
         };
+    }
+
+    /**
+     * set tenant.
+     */
+    public function set(): void
+    {
+        // Retrieve tenant from session
+        $tenantId = Session::get('tenant_id');
+
+        if (!$tenantId) {
+            throw new \Exception('No tenant found in session.');
+        }
+
+        $tenant = Tenant::find($tenantId);
+
+        if (!$tenant || !$tenant->db_name) {
+            throw new \Exception('Tenant database not found.');
+        }
+
+        try {
+            $this->setTenantConnection($tenant);
+        } catch (\Exception $e) {
+
+        }
+
     }
 }

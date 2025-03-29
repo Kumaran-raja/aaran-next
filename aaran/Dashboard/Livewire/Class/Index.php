@@ -2,17 +2,24 @@
 
 namespace Aaran\Dashboard\Livewire\Class;
 
-use Livewire\Attributes\Layout;
+use Aaran\Core\Tenant\Facades\TenantManager;
 use Livewire\Component;
 
 class Index extends Component
 {
 
-    public string $data = 'sundar';
+    public string $tenant;
+    public string $tenantSettings;
+    public string $tenantDefaultCompany;
 
-//    #[Layout('components.layouts.app')]
     public function render()
     {
+        $this->tenant = TenantManager::getTenant();
+//        $this->tenantSettings = TenantManager::getSettings();
+//        $this->tenantDefaultCompany = TenantManager::getCompany();
+
+
+
         return view('dashboard::index');
     }
 
