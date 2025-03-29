@@ -31,7 +31,7 @@
                         <x-Ui::table.cell-text left>{{$row->vname}}</x-Ui::table.cell-text>
                         <x-Ui::table.cell-status active="{{$row->active_id}}"/>
                         <x-Ui::table.cell-action id="{{$row->id}}"/>
-                    </x-Ui::aaran-ui::table.row>
+                    </x-Ui::Ui::table.row>
                 @endforeach
             </x-slot:table_body>
         </x-Ui::table.form>

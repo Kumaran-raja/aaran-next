@@ -32,7 +32,7 @@
 
         <ul class="grid-cols-1 grid bg-gray-800">
 
-            @include('aaran-ui::components.menu.app.items.books-menu')
+            @include('Ui::components.menu.app.items.books-menu')
             <li class="bg-gray-1000 mt-0.5"></li>
         </ul>
     </div>

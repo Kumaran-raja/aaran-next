@@ -4,7 +4,7 @@
         class="bg-[#e7eafd] border border-[#3F5AF3] rounded-md p-5 flex-col flex gap-3 animate__animated wow animate__backInLeft"
         data-wow-duration="3s">
         <div class="w-full">
-            <x-icons.icon icon="user-group" class="w-7 h-7 text-[#3F5AF3]"/>
+            <x-Ui::icons.icon icon="user-group" class="w-7 h-7 text-[#3F5AF3]"/>
         </div>
         <div class="text-xl font-semibold">Add your Teams to Aaran</div>
         <div class=" text-gray-600 text-sm">
@@ -17,7 +17,7 @@
         class="bg-[#e7eafd] border border-[#3F5AF3] rounded-md p-5 flex-col flex gap-3 animate__animated wow animate__backInRight"
         data-wow-duration="3s">
         <div class="w-full">
-            <x-icons.icon icon="message-round" class="w-7 h-7 text-[#3F5AF3]"/>
+            <x-Ui::icons.icon icon="message-round" class="w-7 h-7 text-[#3F5AF3]"/>
         </div>
         <div class="text-xl font-semibold">Need help finding the right plan for your business?</div>
         <div class=" text-gray-600 text-sm">

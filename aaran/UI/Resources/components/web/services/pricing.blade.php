@@ -14,7 +14,7 @@
     <div id="tab1"
          class="tab-content sm:w-9/12 w-auto mx-auto grid sm:grid-cols-4 grid-cols-1 gap-6 sm:px-0 px-2 animate__animated wow bounceInUp"
          data-wow-duration="3s">
-        <x-web.services.items.price-card
+        <x-Ui::web.services.items.price-card
             plan_name="Basic"
             plan="Free"
             price="-"
@@ -24,12 +24,12 @@
         >
             @for($i=1; $i<=5; $i++)
                 <div class="inline-flex items-center gap-x-2 text-sm">
-                    <x-icons.icon-fill iconfill="check" class="w-5 h-auto"/>
+                    <x-Ui::icons.icon-fill iconfill="check" class="w-5 h-auto"/>
                     <span>Customise Invoice Columns with Formulas</span>
                 </div>
             @endfor
-        </x-web.services.items.price-card>
-        <x-web.services.items.price-card
+        </x-Ui::web.services.items.price-card>
+        <x-Ui::web.services.items.price-card
             plan_name="Premium"
             plan="Premium pack"
             price="3500"
@@ -39,12 +39,12 @@
         >
             @for($i=1; $i<=5; $i++)
                 <div class="inline-flex items-center gap-x-2 text-sm">
-                    <x-icons.icon-fill iconfill="check" class="w-5 h-auto"/>
+                    <x-Ui::icons.icon-fill iconfill="check" class="w-5 h-auto"/>
                     <span>Customise Invoice Columns with Formulas</span>
                 </div>
             @endfor
-        </x-web.services.items.price-card>
-        <x-web.services.items.price-card
+        </x-Ui::web.services.items.price-card>
+        <x-Ui::web.services.items.price-card
             plan_name="Advanced"
             plan="Recommended Pack"
             price="8000"
@@ -54,12 +54,12 @@
         >
             @for($i=1; $i<=5; $i++)
                 <div class="inline-flex items-center gap-x-2 text-sm">
-                    <x-icons.icon-fill iconfill="check" class="w-5 h-auto"/>
+                    <x-Ui::icons.icon-fill iconfill="check" class="w-5 h-auto"/>
                     <span>Customise Invoice Columns with Formulas</span>
                 </div>
             @endfor
-        </x-web.services.items.price-card>
-        <x-web.services.items.price-card
+        </x-Ui::web.services.items.price-card>
+        <x-Ui::web.services.items.price-card
             plan_name="Book Pro"
             plan="Complete Package"
             price="11000"
@@ -69,15 +69,15 @@
         >
             @for($i=1; $i<=5; $i++)
                 <div class="inline-flex items-center gap-x-2 text-sm">
-                    <x-icons.icon-fill iconfill="check" class="w-5 h-auto"/>
+                    <x-Ui::icons.icon-fill iconfill="check" class="w-5 h-auto"/>
                     <span>Customise Invoice Columns with Formulas</span>
                 </div>
             @endfor
-        </x-web.services.items.price-card>
+        </x-Ui::web.services.items.price-card>
     </div>
 
     <div id="tab2" class="tab-content hidden w-9/12 mx-auto grid grid-cols-4 gap-6 ">
-        <x-web.services.items.price-card
+        <x-Ui::web.services.items.price-card
             plan_name="Basic"
             plan="Free"
             price="-"
@@ -87,12 +87,12 @@
         >
             @for($i=1; $i<=5; $i++)
                 <div class="inline-flex items-center gap-x-2 text-sm">
-                    <x-icons.icon-fill iconfill="check" class="w-5 h-auto"/>
+                    <x-Ui::icons.icon-fill iconfill="check" class="w-5 h-auto"/>
                     <span>Customise Invoice Columns with Formulas</span>
                 </div>
             @endfor
-        </x-web.services.items.price-card>
-        <x-web.services.items.price-card
+        </x-Ui::web.services.items.price-card>
+        <x-Ui::web.services.items.price-card
             plan_name="Premium"
             plan="Premium pack"
             price="18500"
@@ -102,12 +102,12 @@
         >
             @for($i=1; $i<=5; $i++)
                 <div class="inline-flex items-center gap-x-2 text-sm">
-                    <x-icons.icon-fill iconfill="check" class="w-5 h-auto"/>
+                    <x-Ui::icons.icon-fill iconfill="check" class="w-5 h-auto"/>
                     <span>Customise Invoice Columns with Formulas</span>
                 </div>
             @endfor
-        </x-web.services.items.price-card>
-        <x-web.services.items.price-card
+        </x-Ui::web.services.items.price-card>
+        <x-Ui::web.services.items.price-card
             plan_name="Advanced"
             plan="Recommended Pack"
             price="22000"
@@ -117,12 +117,12 @@
         >
             @for($i=1; $i<=5; $i++)
                 <div class="inline-flex items-center gap-x-2 text-sm">
-                    <x-icons.icon-fill iconfill="check" class="w-5 h-auto"/>
+                    <x-Ui::icons.icon-fill iconfill="check" class="w-5 h-auto"/>
                     <span>Customise Invoice Columns with Formulas</span>
                 </div>
             @endfor
-        </x-web.services.items.price-card>
-        <x-web.services.items.price-card
+        </x-Ui::web.services.items.price-card>
+        <x-Ui::web.services.items.price-card
             plan_name="Book Pro"
             plan="Complete Package"
             price="28000"
@@ -132,11 +132,11 @@
         >
             @for($i=1; $i<=5; $i++)
                 <div class="inline-flex items-center gap-x-2 text-sm">
-                    <x-icons.icon-fill iconfill="check" class="w-5 h-auto"/>
+                    <x-Ui::icons.icon-fill iconfill="check" class="w-5 h-auto"/>
                     <span>Customise Invoice Columns with Formulas</span>
                 </div>
             @endfor
-        </x-web.services.items.price-card>
+        </x-Ui::web.services.items.price-card>
     </div>
     <div class="text-center text-gray-400 text-sm">*All prices are exclusive of GST</div>
 </div>
