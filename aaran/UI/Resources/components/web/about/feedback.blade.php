@@ -1,6 +1,6 @@
 <div class="mt-8 h-20">&nbsp;</div>
 <div class="flex-col flex gap-6 sm:py-0 py-8">
-     <x-web.home-new.items.heading label="Customer Stories" />
+     <x-Ui::web.home-new.items.heading label="Customer Stories" />
     <div class="sm:text-2xl text-lg text-center font-semibold animate__animated wow bounceInUp"
          data-wow-duration="3s">See how customers are growing their businesses and getting incredible results.
     </div>

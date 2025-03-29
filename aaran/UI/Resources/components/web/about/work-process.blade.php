@@ -1,6 +1,6 @@
 <div class=" font-roboto tracking-wider sm:py-0 py-2 sm:px-0 px-2">
 
-    <x-web.home-new.items.heading label="What we do"/>
+    <x-Ui::web.home-new.items.heading label="What we do"/>
 
     <div class="relative">
         <div
@@ -28,7 +28,7 @@
                     Dignissimos,
                     dolores in veniam veritatis voluptatem voluptatibus.
                 </div>
-                <x-button.animate3>Read More</x-button.animate3>
+                <x-Ui::button.animate3>Read More</x-Ui::button.animate3>
             </div>
         @endfor
     </div>

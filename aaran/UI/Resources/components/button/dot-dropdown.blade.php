@@ -62,14 +62,14 @@
 {{--                <a wire:click="edit({{ $row->id }})"--}}
                 <a wire:click="edit({{ '' }})"
                    class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
-                    <x-icons.icon :icon="'pencil'"
+                    <x-Ui::icons.icon :icon="'pencil'"
                                   class="h-4 w-auto block text-blue-600"/>
                     edit
                 </a>
 {{--                <a wire:click="getDelete({{ $row->id }})"--}}
                 <a wire:click="getDelete({{ '' }})"
                    class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
-                    <x-icons.icon :icon="'trash'"
+                    <x-Ui::icons.icon :icon="'trash'"
                                   class="h-4 w-auto block text-red-600"/>
                     delete
                 </a>

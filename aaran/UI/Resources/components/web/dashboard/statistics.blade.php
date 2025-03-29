@@ -31,7 +31,7 @@
     <div>
         <canvas id="order-chart"></canvas>
     </div>
-    <x-web.dashboard.style/>
-    <x-web.dashboard.script/>
+    <x-Ui::web.dashboard.style/>
+    <x-Ui::web.dashboard.script/>
 </div>
 

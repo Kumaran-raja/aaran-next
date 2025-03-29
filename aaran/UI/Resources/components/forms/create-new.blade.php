@@ -4,12 +4,12 @@
 
 <form wire:submit.prevent="save" >
     <div class="w-full">
-        <x-jet.modal :maxWidth="'6xl'" wire:model.defer="showEditModal">
+        <x-Ui::jet.modal :maxWidth="'6xl'" wire:model.defer="showEditModal">
             <div class="px-6  pt-4">
                 <div class="text-lg">
                     {{$id === "" ? 'New Entry' : 'Edit Entry'}}
                 </div>
-                <x-forms.section-border class="py-2"/>
+                <x-Ui::forms.section-border class="py-2"/>
                 {{$slot}}
                 <div class="mb-1">&nbsp;</div>
             </div>
@@ -30,11 +30,11 @@
                         </label>
                     </div>
                     <div class="flex gap-3">
-                        <x-button.cancel/>
-                        <x-button.save/>
+                        <x-Ui::button.cancel-x/>
+                        <x-Ui::button.save-x/>
                     </div>
                 </div>
             </div>
-        </x-jet.modal>
+        </x-Ui::jet.modal>
     </div>
 </form>

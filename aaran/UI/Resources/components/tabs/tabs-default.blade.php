@@ -9,25 +9,25 @@
         <div x-show="selectedTab === 'groups'" id="tabpanelGroups" role="tabpanel" aria-label="groups">
             <div><b><a href="#" class="underline">Groups</a></b> tab is selected</div>
             <div>
-                <x-interactions.download />
+                <x-Ui::interactions.download />
             </div>
         </div>
         <div x-show="selectedTab === 'likes'" id="tabpanelLikes" role="tabpanel" aria-label="likes">
             <div><b><a href="#" class="underline">Likes</a></b> tab is selected</div>
             <div>
-                <x-interactions.download />
+                <x-Ui::interactions.download />
             </div>
         </div>
         <div x-show="selectedTab === 'comments'" id="tabpanelComments" role="tabpanel" aria-label="comments">
             <div><b><a href="#" class="underline">Comments</a></b> tab is selected</div>
             <div>
-                <x-interactions.download />
+                <x-Ui::interactions.download />
             </div>
         </div>
         <div x-show="selectedTab === 'saved'" id="tabpanelSaved" role="tabpanel" aria-label="saved">
             <div><b><a href="#" class="underline">Saved</a></b> tab is selected</div>
             <div>
-                <x-interactions.download />
+                <x-Ui::interactions.download />
             </div>
         </div>
     </div>

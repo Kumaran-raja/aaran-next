@@ -1,21 +1,21 @@
 <div class="flex flex-col sm:gap-y-8 gap-y-4 sm:pb-0 pb-8">
-    <x-web.home-new.items.heading label="TEAM MEMBERS"/>
+    <x-Ui::web.home-new.items.heading label="TEAM MEMBERS"/>
     <div
         class="sm:w-6/12 w-auto mx-auto text-center sm:text-5xl text-2xl font-semibold animate__animated wow bounceInUp"
         data-wow-duration="3s">Quality Expert Team Would Like To Hear From You
     </div>
     <div class="sm:w-10/12 w-auto mx-auto grid sm:grid-cols-4 grid-cols-2 sm:gap-3 gap-2 sm:p-3 p-2 bg-[#F3F4F6]">
-        <x-web.about.items.team-card images="../../../../images/t1.webp" name="Mac Rayonds" position="UI/UX Design"
+        <x-Ui::web.about.items.team-card images="../../../../images/t1.webp" name="Mac Rayonds" position="UI/UX Design"
                                      class="animate__animated wow animate__backInLeft"
                                      data-wow-duration="3s"/>
-        <x-web.about.items.team-card images="../../../../images/t3.webp" name="Lara Williams" position="Web Developer"
+        <x-Ui::web.about.items.team-card images="../../../../images/t3.webp" name="Lara Williams" position="Web Developer"
                                      class="animate__animated wow animate__backInLeft"
                                      data-wow-duration="3s"/>
-        <x-web.about.items.team-card images="../../../../images/t4.webp" name="Shilph Adams"
+        <x-Ui::web.about.items.team-card images="../../../../images/t4.webp" name="Shilph Adams"
                                      position="UI/UX DesignAccounts"
                                      class="animate__animated wow animate__backInRight"
                                      data-wow-duration="3s"/>
-        <x-web.about.items.team-card images="../../../../images/t5.webp" name="Mana Green" position="Senior Executive"
+        <x-Ui::web.about.items.team-card images="../../../../images/t5.webp" name="Mana Green" position="Senior Executive"
                                      class="animate__animated wow animate__backInRight"
                                      data-wow-duration="3s"/>
     </div>

@@ -129,7 +129,7 @@
             <x-Ui::forms.create :id="$common->vid" :max-width="'xl'">
                 <div class="flex flex-col gap-4">
 
-                    {{-- <x-input.model-text wire:model="common.vname" :label="'Name'"/>--}}
+                    {{-- <x-Ui::input.model-text wire:model="common.vname" :label="'Name'"/>--}}
 
                     <div class="inline-flex gap-3">
                         <input type="checkbox" wire:model="visibility">

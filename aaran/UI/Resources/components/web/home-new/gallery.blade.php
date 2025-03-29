@@ -157,33 +157,33 @@
             <div class="w-9/12 mx-auto grid grid-cols-3 pt-8">
                 @for($i=0; $i<3; $i++)
                     <div class="flex-col flex animate__animated wow animate__bounceInUp" data-wow-duration="2s">
-                        <x-accordion-single.list heading="Clean and modern Design">
+                        <x-Ui::accordion-single.list heading="Clean and modern Design">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores autem commodi ex inventore laborum libero omnis quaerat qui quo recusandae repellat sit ut, veniam?
-                        </x-accordion-single.list>
-                        <x-accordion-single.list heading="Drag and Drop Template Builder">
+                        </x-Ui::accordion-single.list>
+                        <x-Ui::accordion-single.list heading="Drag and Drop Template Builder">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, vero!
-                        </x-accordion-single.list>
-                        <x-accordion-single.list heading="Ajax Instant Search">
+                        </x-Ui::accordion-single.list>
+                        <x-Ui::accordion-single.list heading="Ajax Instant Search">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, vero!
-                        </x-accordion-single.list>
-                        <x-accordion-single.list heading="Translation ready">
+                        </x-Ui::accordion-single.list>
+                        <x-Ui::accordion-single.list heading="Translation ready">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, vero!
-                        </x-accordion-single.list>
-                        <x-accordion-single.list heading="WooCommerce ready">
+                        </x-Ui::accordion-single.list>
+                        <x-Ui::accordion-single.list heading="WooCommerce ready">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, vero!
-                        </x-accordion-single.list>
-                        <x-accordion-single.list heading="WooCommerce Bookings Support">
+                        </x-Ui::accordion-single.list>
+                        <x-Ui::accordion-single.list heading="WooCommerce Bookings Support">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, vero!
-                        </x-accordion-single.list>
-                        <x-accordion-single.list heading="WPML ready">
+                        </x-Ui::accordion-single.list>
+                        <x-Ui::accordion-single.list heading="WPML ready">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, vero!
-                        </x-accordion-single.list>
-                        <x-accordion-single.list heading="Responsive design">
+                        </x-Ui::accordion-single.list>
+                        <x-Ui::accordion-single.list heading="Responsive design">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, vero!
-                        </x-accordion-single.list>
-                        <x-accordion-single.list heading="Child theme support">
+                        </x-Ui::accordion-single.list>
+                        <x-Ui::accordion-single.list heading="Child theme support">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, vero!
-                        </x-accordion-single.list>
+                        </x-Ui::accordion-single.list>
                     </div>
                 @endfor
             </div>

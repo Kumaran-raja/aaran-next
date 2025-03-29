@@ -6,7 +6,7 @@
     </div>
 
     <div class="space-x-2 flex items-center">
-        <x-forms.per-page/>
-        <x-button.new/>
+        <x-Ui::forms.per-page/>
+        <x-Ui::button.new-x/>
     </div>
 </div>

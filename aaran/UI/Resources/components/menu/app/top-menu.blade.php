@@ -81,7 +81,7 @@ shadow-md print:hidden">
                             {{--                            @if (Laravel\Jetstream\Jetstream::hasApiFeatures())--}}
                             {{--                                <x-dropdown-link href="{{ route('api-tokens.index') }}">--}}
                             {{--                                    {{ __('API Tokens') }}--}}
-                            {{--                                </x-jet.dropdown-link>--}}
+                            {{--                                </x-Ui::jet.dropdown-link>--}}
                             {{--                            @endif--}}
 
                             <!-- Authentication -->

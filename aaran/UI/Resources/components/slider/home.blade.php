@@ -59,7 +59,7 @@
 
                 @if($list)
                     @forelse($list as $row)
-                        <x-slider.home-slider
+                        <x-Ui::slider.home-slider
                             :bg_image="'/../../../storage/images/{{$row->bg_image}}'"
                             title="{{$row->vname}}"
                             slogan="{{$row->description}}"
@@ -67,21 +67,21 @@
 
                     @empty
 
-                        <x-slider.home-slider
+                        <x-Ui::slider.home-slider
                             :bg_image="'/../../../images/home/bg_1.webp'"
                             title="Best Online GST Billing Software in India"
                             slogan="Create, manage & track invoices, e-invoices, and eWay bills, 100% safe, reliable, and secure..."
 
                         />
 
-                        <x-slider.home-slider
+                        <x-Ui::slider.home-slider
                             :bg_image="'/../../../images/home/bg_6.webp'"
                             title="Only GST Billing Software You Need For Your Business"
                             slogan="Streamline your invoicing with GST billing software, effortlessly create GST-compliant invoices in minutes..."
                         />
 
 
-                        <x-slider.home-slider
+                        <x-Ui::slider.home-slider
                             :bg_image="'/../../../images/home/bg_7.webp'"
                             title="Book keeping and Transaction Recording"
                             slogan="Categorized revenue, expenses, assets, liabilities, and other options.
@@ -89,7 +89,7 @@
                             text_length="28"
                         />
 
-                        <x-slider.home-slider
+                        <x-Ui::slider.home-slider
                             :bg_image="'/../../../images/home/bg_2.webp'"
                             title="Maintain Regular Communication"
                             slogan="Keeping clients in the loop about their financial standing and any pertinent
@@ -98,13 +98,13 @@
 
 
 
-                        <x-slider.home-slider
+                        <x-Ui::slider.home-slider
                             :bg_image="'/../../../images/home/bg_4.webp'"
                             title="one-stop solution workflow management."
                             slogan="Devote all your attention to a better customer experience for fast and secure information sharing"
                         />
 
-                        <x-slider.home-slider
+                        <x-Ui::slider.home-slider
                             :bg_image="'/../../../images/home/bg_3.webp'"
                             title="Real-Time Financial Monitoring and Reporting"
                             slogan="Helps to tracks the KPIs like revenue growth, gross margin, and net profit business
@@ -123,7 +123,7 @@
 
             <!-- Prev Button -------------------------------------------------------------------------------------->
             <button x-on:click="prev" @mouseover="stopAutoSlide()" @mouseout="startAutoSlide()">
-                <x-icons.icon icon="chevrons-left"
+                <x-Ui::icons.icon icon="chevrons-left"
                               class="w-auto sm:h-12 h-7 block text-gray-300 hover:text-orange-500 rounded-xl hover:bg-orange-200 opacity-50 hover:opacity-100"/>
             </button>
 
@@ -131,7 +131,7 @@
             <!-- Next Button -------------------------------------------------------------------------------------->
 
             <button x-on:click="next" @mouseover="stopAutoSlide()" @mouseout="startAutoSlide()">
-                <x-icons.icon icon="chevrons-right"
+                <x-Ui::icons.icon icon="chevrons-right"
                               class="w-auto sm:h-12 h-7 block text-gray-300 hover:text-orange-500 rounded-xl hover:bg-orange-200 opacity-50 hover:opacity-100"/>
             </button>
         </div>

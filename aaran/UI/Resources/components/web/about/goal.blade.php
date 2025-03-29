@@ -2,7 +2,7 @@
     class=" grid sm:grid-cols-2 grid-cols-1 gap-12 sm:h-[40rem] h-auto font-roboto tracking-wider sm:pl-40 sm:px-0 px-2">
     <div class=" flex-col flex sm:gap-y-8 gap-y-4 py-8">
 
-        <x-web.home-new.items.heading label="ABOUT COMPANY" />
+        <x-Ui::web.home-new.items.heading label="ABOUT COMPANY" />
 
         <div class="sm:text-5xl text-2xl font-semibold sm:leading-[50px] animate__animated wow animate__backInLeft"
              data-wow-duration="3s">Our Main Goal to Satisfied Local & Global Clients.
@@ -14,9 +14,9 @@
             Asperiores magni minima nihil!
         </div>
         <div class="sm:w-4/6 w-auto grid grid-cols-3 gap-6 animate__animated wow bounceInUp" data-wow-duration="3s">
-            <x-button.animate2 class="tab-button" onclick="showTab('tab1')">Button 1</x-button.animate2>
-            <x-button.animate2 class="tab-button" onclick="showTab('tab2')">Button 2</x-button.animate2>
-            <x-button.animate2 class="tab-button" onclick="showTab('tab3')">Button 3</x-button.animate2>
+            <x-Ui::button.animate2 class="tab-button" onclick="showTab('tab1')">Button 1</x-Ui::button.animate2>
+            <x-Ui::button.animate2 class="tab-button" onclick="showTab('tab2')">Button 2</x-Ui::button.animate2>
+            <x-Ui::button.animate2 class="tab-button" onclick="showTab('tab3')">Button 3</x-Ui::button.animate2>
         </div>
         <div id="tab1" class="tab-content">
             <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem distinctio dolor dolorum
