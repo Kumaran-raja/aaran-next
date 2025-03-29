@@ -349,7 +349,7 @@ class Blog extends Component
 
 
     #region[render]
-    #[Layout('components.layouts.web')]
+    #[Layout('Ui::components.layouts.web')]
     public function render()
     {
         $this->getBlogcategoryList();

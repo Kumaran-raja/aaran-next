@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class About extends Component
 {
-    #[Layout('components.layouts.web')]
+    #[Layout('Ui::components.layouts.web')]
     public function render()
     {
         return view('website::about');
