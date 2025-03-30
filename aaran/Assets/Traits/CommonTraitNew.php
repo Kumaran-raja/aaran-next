@@ -1,6 +1,6 @@
 <?php
 
-namespace Aaran\Assets\Trait;
+namespace Aaran\Assets\Traits;
 
 use Aaran\Assets\LivewireForms\CommonForm;
 use Aaran\Assets\LivewireForms\GetListForm;

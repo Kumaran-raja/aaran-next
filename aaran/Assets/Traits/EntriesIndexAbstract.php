@@ -1,6 +1,6 @@
 <?php
 
-namespace Aaran\Assets\Trait;
+namespace Aaran\Assets\Traits;
 
 use Livewire\Component;
 use Livewire\WithPagination;

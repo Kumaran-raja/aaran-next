@@ -1,6 +1,6 @@
 <?php
 
-namespace Aaran\Assets\Trait;
+namespace Aaran\Assets\Traits;
 
 use Illuminate\Support\Collection;
 use Livewire\Component;

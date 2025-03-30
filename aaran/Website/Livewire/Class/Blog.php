@@ -4,7 +4,7 @@ namespace Aaran\Website\Livewire\Class;
 
 use Livewire\Attributes\Layout;
 use Livewire\Component;
-use Aaran\Assets\Trait\CommonTraitNew;
+use Aaran\Assets\Traits\CommonTraitNew;
 use Aaran\Website\Models\BlogCategory;
 use Aaran\Website\Models\BlogPost;
 use Aaran\Website\Models\BlogTag;
