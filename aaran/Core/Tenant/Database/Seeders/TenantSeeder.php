@@ -10,9 +10,10 @@ class TenantSeeder extends Seeder
     public function run(): void
     {
         Tenant::create([
-            'name' => 'tenant_1',
+            'b_name' => 'tenant_1',
             't_name' => 'tenant_1',
             'email' => 'tenant_1@gmail.com',
+            'contact' => 'sundar',
             'phone' => '+91 1234567890',
             'db_name' => 'tenant_1',
             'db_host' => '127.0.0.1',
@@ -38,9 +39,10 @@ class TenantSeeder extends Seeder
         ]);
 
         Tenant::create([
-            'name' => 'tenant_2',
+            'b_name' => 'tenant_2',
             't_name' => 'tenant_2',
             'email' => 'tenant_2@gmail.com',
+            'contact' => 'codexsun',
             'phone' => '+91 1234567890',
             'db_name' => 'tenant_2',
             'db_host' => '127.0.0.1',

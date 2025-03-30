@@ -25,7 +25,7 @@ class TenantDatabaseService
         });
 
         // Log switching attempt
-        Log::debug("Switching to a tenant database instance.");
+        Log::debug("2. Switching to a tenant database instance.");
 
         // Check if the 'tenant' connection is already configured
         if (!Config::has("database.connections.tenant")) {
