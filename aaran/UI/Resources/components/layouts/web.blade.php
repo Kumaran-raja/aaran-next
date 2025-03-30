@@ -15,7 +15,8 @@
     @stack('custom-style')
 
     <!-- Styles -->
-    @livewireStyles
+{{--    @livewireStyles--}}
+    @fluxAppearance
 </head>
 <body class="font-sans antialiased">
 {{--        <x-banner />--}}
@@ -32,7 +33,8 @@
 
 @stack('modals')
 
-@livewireScripts
+{{--@livewireScripts--}}
+@fluxScripts
 
 @stack('custom-scripts')
 <script
