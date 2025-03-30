@@ -4,6 +4,10 @@ namespace Aaran\Core\Setup\Providers;
 
 use Aaran\Core\Setup\Console\Commands\AaranMigrateCommand;
 use Aaran\Core\Setup\Console\Commands\AaranSetupCommand;
+use Aaran\Core\Setup\Livewire\Class\DatabaseSetup;
+use Aaran\Core\Setup\Livewire\Class\IndustryFeatures;
+use Aaran\Core\Setup\Livewire\Class\SubscriptionSecurity;
+use Aaran\Core\Setup\Livewire\Class\TenantDetails;
 use Aaran\Core\Setup\Livewire\Class\TenantSetupWizard;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;

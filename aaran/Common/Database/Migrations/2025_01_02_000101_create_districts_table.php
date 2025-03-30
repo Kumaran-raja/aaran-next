@@ -8,7 +8,7 @@ return new class extends Migration {
 
     public function up(): void
     {
-        if (Aaran\Assets\Features\Customise::hasCommon()) {
+        if (Aaran\Core\Tenant\Services\FeatureManager::hasFeature('common')) {
 
             Schema::create('districts', function (Blueprint $table) {
                 $table->id();

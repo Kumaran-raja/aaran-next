@@ -29,8 +29,9 @@ return new class extends Migration {
             $table->integer('user_limit')->default(5);
             $table->boolean('is_active')->default(true);
             // Multi-Tenant Features
+            $table->string('industry_code')->nullable();
             $table->json('settings')->nullable();
-            $table->json('features')->nullable();
+            $table->json('enabled_features')->nullable();
             // Security
             $table->boolean('two_factor_enabled')->default(false);
             $table->string('api_key')->nullable();
