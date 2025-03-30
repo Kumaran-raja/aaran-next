@@ -38,3 +38,20 @@
 - Service - @muthukumaran
 - Contact - @muthukumaran
 - Blog - @muthukumaran
+
+
+# Job -3 Common models
+- refactor all common models according to tenant base service
+- changes in model, livewire class and views check git #28 working tenant based city list
+- work on this create two tables as tenant 
+- tenant_1
+- tenant_2
+- run php artisan migrate:fresh --seed first and
+- run php artisan aaran:migrate tenant_1 --fresh --seed and
+- run php artisan aaran:migrate tenant_2 --fresh --seed and
+- login with devone@aaran.org for first tenant_1 and for
+- login with devtwo@aaran.org for first tenant_1 and for
+- test all parameters visually like
+- http://127.0.0.1:8000/cities
+- create, edit, delete, change active  new city in first user devone
+- check the same for devtwo
