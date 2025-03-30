@@ -2,6 +2,8 @@
 
 namespace Aaran\Core\Tenant\Providers;
 
+use Aaran\Core\Tenant\Helpers\TenantHelper;
+use Aaran\Core\Tenant\Http\Middleware\TenantDatabaseMiddleware;
 use Aaran\Core\Tenant\Http\Middleware\TenantMiddleware;
 use Aaran\Core\Tenant\Services\TenantDatabaseService;
 use Aaran\Core\Tenant\Services\TenantManagerService;
@@ -16,13 +18,19 @@ class TenantServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->singleton(TenantDatabaseService::class, function ($app) {
-            return new TenantDatabaseService();
+//        $this->app->singleton(TenantDatabaseService::class, function ($app) {
+//            return new TenantDatabaseService();
+//        });
+//
+//        $this->app->singleton(TenantManagerService::class, function ($app) {
+//            return new TenantManagerService();
+//        });
+
+        $this->app->singleton(TenantHelper::class, function ($app) {
+            return new TenantHelper();
         });
 
-        $this->app->singleton(TenantManagerService::class, function ($app) {
-            return new TenantManagerService();
-        });
+
     }
 
     public function boot()
@@ -40,7 +48,8 @@ class TenantServiceProvider extends ServiceProvider
         $router = $this->app->make(Router::class);
 
         // Register 'tenant' as a standalone middleware key
-        $router->aliasMiddleware('tenant', TenantMiddleware::class);
+        $router->aliasMiddleware('tenant', TenantDatabaseMiddleware::class);
+//        $router->aliasMiddleware('tenant', TenantMiddleware::class);
     }
 
 
