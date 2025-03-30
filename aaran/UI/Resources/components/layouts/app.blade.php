@@ -14,12 +14,11 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>--}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
     @stack('custom-style')
 
     <!-- Styles -->
-    @livewireStyles
     @fluxAppearance
 </head>
 <body class="font-sans antialiased">
@@ -29,8 +28,8 @@
      class="min-h-screen bg-white print:bg-white">
     <div class="flex-1">
 
-{{--        <x-Ui::menu.app.top-menu>{{$header}}</x-Ui::menu.app.top-menu>--}}
-{{--        <x-Ui::menu.app.side-menu/>--}}
+        <x-Ui::menu.app.top-menu>{{$header}}</x-Ui::menu.app.top-menu>
+        <x-Ui::menu.app.side-menu/>
 
         <!-- Page Content -->
         <main class=" bg-[#F8F8FF] print:bg-white sm:p-5 p-2 ">
@@ -42,7 +41,6 @@
 
 @stack('modals')
 
-@livewireScripts
 @fluxScripts
 
 @stack('custom-script')

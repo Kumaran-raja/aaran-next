@@ -2,7 +2,7 @@
     'contacts' => null
 ])
 
-<div class="sm:w-3/12 w-auto h-[28rem] bg-white rounded-md hover:shadow-md ">
+<div class="sm:w-3/12 w-auto h-[28rem] bg-white rounded-md shadow-md ">
 
     <div class="h-[4rem] w-full py-3 border-b border-gray-200 inline-flex items-center justify-between px-4">
                          <span class="inline-flex items-center gap-2">
@@ -33,40 +33,46 @@
     </div>
 
     <div class=" h-[24rem] overflow-y-auto">
-        @foreach($contacts as $contact)
 
-            <div class="flex justify-between items-center hover:bg-[#FFFFF0] p-4">
-                <div class="inline-flex items-center gap-3">
+        @if(isset($contacts))
 
-                    <div
-                        class="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-slate-600 rounded-full dark:bg-gray-600 outline outline-2 outline-offset-2 outline-blue-900">
-                        <a
-                            {{--                            href="{{route('contactReport',[$contact->id])}}"--}}
-                            {{-- TODO: WANT TO REFER --}}
-                        >
+            @foreach($contacts as $contact)
+
+                <div class="flex justify-between items-center hover:bg-[#FFFFF0] p-4">
+                    <div class="inline-flex items-center gap-3">
+
+                        <div
+                            class="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-slate-600 rounded-full dark:bg-gray-600 outline outline-2 outline-offset-2 outline-blue-900">
+                            <a
+                                {{--                            href="{{route('contactReport',[$contact->id])}}"--}}
+                                {{-- TODO: WANT TO REFER --}}
+                            >
                         <span
                             class=" font-medium text-white dark:text-gray-400">{{substr($contact->vname,0,2)}}</span></a>
+                        </div>
+
+                        {{--                    <img src="../../../../images/t2.jpg" alt="" class="w-10 h-10 self-start rounded-lg">--}}
+
+                        <div class="text-xs flex-col flex gap-1">
+
+                            <div class="font-bold"><a
+                                    {{--                                    href="{{route('contactReport',[$contact->id])}}"--}}
+                                >{{$contact->vname}}</a></div>
+                            {{--                                        <div class="text-emerald-950 font-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eos!</div>--}}
+                            <div class="text-gray-600 text-xs"><a
+                                    {{--                                    href="{{route('contactReport',[$contact->id])}}"--}}
+                                    {{-- TODO: WANT TO REFER --}}
+                                >{{ date('d-M') }}</a></div>
+                        </div>
+
                     </div>
-
-                    {{--                    <img src="../../../../images/t2.jpg" alt="" class="w-10 h-10 self-start rounded-lg">--}}
-
-                    <div class="text-xs flex-col flex gap-1">
-
-                        <div class="font-bold"><a
-                                {{--                                    href="{{route('contactReport',[$contact->id])}}"--}}
-                            >{{$contact->vname}}</a></div>
-                        {{--                                        <div class="text-emerald-950 font-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eos!</div>--}}
-                        <div class="text-gray-600 text-xs"><a
-                                {{--                                    href="{{route('contactReport',[$contact->id])}}"--}}
-                                {{-- TODO: WANT TO REFER --}}
-                            >{{ date('d-M') }}</a></div>
+                    <div
+                        class="text-sm inline-flex items-center text-green-600 font-bold space-x-2 self-center">
+                        <span>₹</span> <span>{{\Aaran\Web\Livewire\dashboard\Index::getCustomer($contact->id)}}</span>
                     </div>
-
                 </div>
-                <div
-                    class="text-sm inline-flex items-center text-green-600 font-bold space-x-2 self-center">
-                    <span>₹</span> <span>{{\Aaran\Web\Livewire\dashboard\Index::getCustomer($contact->id)}}</span></div>
-            </div>
-        @endforeach
+            @endforeach
+
+        @endif
     </div>
 </div>

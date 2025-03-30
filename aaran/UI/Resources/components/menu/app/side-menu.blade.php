@@ -46,31 +46,31 @@
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasMAster())
-                <x-Ui::menu.app.sub.master/>
+{{--                <x-Ui::menu.app.sub.master/>--}}
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasEntries())
-                <x-Ui::menu.app.sub.entries/>
+{{--                <x-Ui::menu.app.sub.entries/>--}}
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasTransaction())
-                <x-Ui::menu.app.sub.transaction/>
+{{--                <x-Ui::menu.app.sub.transaction/>--}}
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasCore())
-                <x-Ui::menu.app.sub.core/>
+{{--                <x-Ui::menu.app.sub.core/>--}}
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasBooks())
-                <x-Ui::menu.app.sub.books/>
+{{--                <x-Ui::menu.app.sub.books/>--}}
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasBlog())
-                <x-Ui::menu.app.sub.blog/>
+{{--                <x-Ui::menu.app.sub.blog/>--}}
             @endif
 
             @if(\Aaran\Assets\Features\Customise::hasReport())
-                <x-Ui::menu.app.sub.reports/>
+{{--                <x-Ui::menu.app.sub.reports/>--}}
             @endif
 
             {{--            @if(Aaran\Aadmin\Src\Customise::hasReport())--}}

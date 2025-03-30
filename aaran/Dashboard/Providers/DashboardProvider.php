@@ -2,7 +2,9 @@
 
 namespace Aaran\Dashboard\Providers;
 
+use Aaran\Dashboard\Livewire\Class\SalesChart;
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
 
 class DashboardProvider extends ServiceProvider
 {
@@ -43,6 +45,8 @@ class DashboardProvider extends ServiceProvider
     private function registerViews()
     {
         $this->loadViewsFrom(__DIR__ . '/../Livewire/Views', $this->moduleNameLower);
+
+        Livewire::component('dashboard::sales-chart', SalesChart::class);
     }
 
 }

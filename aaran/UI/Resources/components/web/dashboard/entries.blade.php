@@ -2,7 +2,7 @@
 'entries' => null
 ])
 
-<div class="sm:w-4/12 w-auto bg-white  rounded-lg flex-col flex h-[28rem] hover:shadow-md">
+<div class="sm:w-4/12 w-auto bg-white  rounded-lg flex-col flex h-[28rem] shadow-md">
 
     <div class="w-full h-[4rem] py-3 border-b border-gray-200 inline-flex items-center justify-between px-8">
         <span class="inline-flex items-center gap-2">
@@ -18,7 +18,9 @@
 
     <div class="flex-col flex h-[24rem] px-2 overflow-y-auto">
 
-        <a href="{{route('sales')}}">
+        <a
+{{--            href="{{route('sales')}}"--}}
+        >
             <x-Ui::web.dashboard.entries_list
                 entry="Sales"
 {{--                date="{{$entries['sales_date']}}"--}}
@@ -30,7 +32,9 @@
             </x-Ui::web.dashboard.entries_list>
         </a>
 
-        <a href="{{route('purchase')}}">
+        <a
+{{--            href="{{route('purchase')}}"--}}
+        >
             <x-Ui::web.dashboard.entries_list
                 entry="Purchase"
 {{--                date="{{$entries['purchase_date']}}"--}}
@@ -42,7 +46,9 @@
             </x-Ui::web.dashboard.entries_list>
         </a>
 
-        <a href="{{route('transactions',[2])}}">
+        <a
+{{--            href="{{route('transactions',[2])}}"--}}
+        >
             <x-Ui::web.dashboard.entries_list
                 entry="Payment"
 {{--                date="{{$entries['payment_date']}}"--}}
@@ -54,7 +60,9 @@
             </x-Ui::web.dashboard.entries_list>
         </a>
 
-        <a href="{{route('transactions',[1])}}">
+        <a
+{{--            href="{{route('transactions',[1])}}"--}}
+        >
             <x-Ui::web.dashboard.entries_list
                 entry="Receipt"
 {{--                date="{{$entries['receipt_date']}}"--}}
