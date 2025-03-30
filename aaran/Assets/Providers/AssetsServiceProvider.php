@@ -12,7 +12,7 @@ class AssetsServiceProvider extends ServiceProvider
 //        $this->loadViewsFrom(__DIR__ . '/../Resources', 'aaran-ui'); // Important: Load views from module
 
 //        $this->getComponent();
-//        $this->getConfig();
+        $this->getConfig();
     }
 
     public function getComponent(): void

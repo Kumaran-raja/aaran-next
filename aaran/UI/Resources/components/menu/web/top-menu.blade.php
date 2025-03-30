@@ -3,11 +3,12 @@
      px-6 py-4 dark:border-neutral-700 text-white"
      aria-label="penguin ui menu">
     <!-- Brand Logo -->
-    <a href="#" class="text-3xl gap-4 inline-flex items-center">
+    <a href="#" class="text-3xl gap-4 inline-flex items-center hover:scale-105 duration-300 transition-all ease-out">
         <span> <x-Ui::logo.cxlogo icon="dark" class="w-auto h-10 block"/></span>
         <span
-            class="hover:scale-110 hover:tracking-wide hover:font-bold hover:text-black hover:underline duration-300 transition-all ease-out">
-                {{ config('aaran-app.brand') }}
+            class=" hover:tracking-wide hover:font-semibold  hover:underline -mt-2">
+{{--                {{ config('aaran-app.brand') }}--}}
+            CODEXSUN
         </span>
     </a>
     <!-- Desktop Menu -->

@@ -2,7 +2,6 @@
 
 namespace Aaran\Dashboard\Livewire\Class;
 
-use Aaran\Core\Tenant\Facades\TenantManager;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
